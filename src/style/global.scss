@@ -1,0 +1,137 @@
+
+$cobalt: #25577d;
+$cobalt-semi: #99cef6;
+$cobalt-light: #BBDFFF;
+
+$gray: #707070;
+$gray-light: #AAAAAA;
+
+$yellow: #f9db7d;
+$yellow-light: #FFECB7;
+
+$red: #F87E7D;
+$red-light: #FCB2B2;
+
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url('/fonts/Roboto-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url('/fonts/Roboto-Medium.ttf');
+  font-display: swap;
+}
+
+
+:root {
+  font-size: 62.5%;
+  body {
+    margin: 0;
+    color: $gray;
+    // Body font size 16px
+    font-size: 1.6rem;
+    font-family: 'RobotoRegular';
+    background-color: #f9f8f3;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background: url('/img/red-section-bg.svg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+
+.app-wrapper {
+  position: relative;
+  max-width: 1300px; 
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 1rem;
+  font-family: 'RobotoMedium';
+  padding-left: 67.5px;
+  padding-right: 67.5px;
+  @media screen and (max-width: 1024px) {
+    padding-left: 51.5px;
+    padding-right: 51.5px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 23.5px;
+    padding-right: 23.5px;
+  } 
+  ul {
+    display: flex;
+    .active {
+      border-radius: 17px;
+      border: 1px solid #2a587b;
+    }
+    &:hover {
+      color: #AAAAAA;
+    }
+    li {
+      padding: 0.3rem 2rem;
+      height: 3rem;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: color 300ms;
+      &:hover {
+        border-radius: 17px;
+        border: 1px solid #2a587b;
+        color: $gray;
+      }
+      @media screen and (max-width: 900px) {
+        padding: 0.3rem 1rem;
+      }
+    }
+  }
+}
+
+.logo-wrapper {
+  height: 13rem;
+  width: 100%;
+  img {
+    height: 100%;
+  }
+  @media screen and (max-width: 696px) {
+    height: 8rem;
+  }
+}
+
+.listen-btn {
+  padding: 0.3rem 6rem;
+  background-color: $cobalt;
+  border-radius: 17px;
+  color: #fff;
+  margin-left: 8rem;
+  display: flex;
+  justify-content: center;
+  width: 15rem;
+  height: 3rem;
+  align-items: center;
+  svg {
+    height: 1rem;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-left: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 1rem;
+  }
+}
