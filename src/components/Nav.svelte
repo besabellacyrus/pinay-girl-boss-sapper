@@ -34,7 +34,7 @@
     height: 100%;
     width: 100%;
     transition: left 300ms ease;
-    left: -500px;
+    left: -9900px;
     top: 0;
     background-color: #fff;
     position: absolute;
@@ -72,11 +72,21 @@
   </div>
   <div class="menu-desktop menu-wrapper">
     <ul>
-      <li>Home</li>
-      <li>Episodes</li>
-      <li>About</li>
-      <li>Resources</li>
-      <li>Contact</li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="episodes">Episodes</a>
+      </li>
+      <li>
+        <a href="about">About</a>
+      </li>
+      <li>
+        <a href="resources">Resources</a>
+      </li>
+      <li>
+        <a href="contact">Contact</a>
+      </li>
     </ul>
     <button class="listen-btn">
       <span>Listen</span>
@@ -138,8 +148,12 @@
     </div>
     <div class="mobile-menu-items">
       <ul>
-        <li>Home</li>
-        <li>Episodes</li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="episodes">Episodes</a>
+        </li>
         <li>About</li>
         <li>Resources</li>
         <li>Contact</li>
