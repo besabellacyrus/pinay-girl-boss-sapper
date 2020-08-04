@@ -1,3 +1,11 @@
+<script context="module">
+  import client from "../lib/apollo";
+</script>
+
+<script>
+
+</script>
+
 <style lang="scss">
   .index-wrapper {
     background-image: url("/img/red-section-bg.svg");

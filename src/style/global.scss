@@ -308,7 +308,9 @@ section {
       margin-top: -22rem;
     }
     @media screen and (max-width: 425px) {
-      width: 40ch;
+      // width: 40ch;
+      margin-top: -15rem;
+      padding: 0 2rem;
     }
     @media screen and (max-width: 320px) {
       width: 30ch;
