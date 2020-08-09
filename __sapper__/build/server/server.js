@@ -374,7 +374,7 @@ const RESOURCES = ApolloClient.gql`
 `;
 
 var client = new ApolloClient__default({
-  uri: process.env.SAPPER_APP_GRAPQL || 'http://pgb-wp-api.test/graphql',
+  uri: 'http://pinaygirlboss.com/wp-api/graphql/',
   fetch: fetch$1,
   onError: ({ networkError, graphQLErrors }) => {
     console.log('graphQLErrors', graphQLErrors);
