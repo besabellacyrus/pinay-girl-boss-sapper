@@ -1,24 +1,45 @@
-<script>
+<script context="module">
+  import client from "../../lib/apollo";
+  import { EPISODES } from "../../queries/episodes";
+  import { PAGINATED_EPISODES } from "../../queries/paginatedEpisodes";
+  const initial = {
+    after: null,
+    first: 3,
+    before: null,
+    last: null
+  };
+  export async function preload() {
+    return {
+      cache: await client.query({
+        query: EPISODES
+      }),
+      paginated: await client.query({
+        query: PAGINATED_EPISODES,
+        variables: initial
+      })
+    };
+  }
+</script>
 
+<script>
+  import { restore, query } from "svelte-apollo";
+  import { fly } from "svelte/transition";
+  import { fade } from "svelte/transition";
+  import moment from "moment";
+
+  export let cache;
+  export let paginated;
+  restore(client, EPISODES, cache.data);
+
+  const episodes = query(client, {
+    query: EPISODES
+  });
+  const cc = paginated.data.episodes.edges[0];
+
+  console.log({ paginated: paginated.data.episodes.edges.indexOf(cc) });
 </script>
 
 <style lang="scss">
-  .episode-bg {
-    background-image: url("/img/episode-main-bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    height: 82vh;
-    width: 100%;
-    top: 0;
-    z-index: -1;
-  }
-  .font-white {
-    color: #fff;
-    h1 {
-      color: #fff;
-    }
-  }
   .podcast-lists-wrapper {
     @media screen and (min-width: 981px) {
       width: 96rem;
@@ -48,9 +69,13 @@
           font-size: 2rem;
           color: inherit;
           line-height: 1.2em;
+          margin-bottom: 1rem;
         }
       }
     }
+  }
+  .episode-main-bg {
+    background-image: url("/img/episode-main-bg.svg");
   }
 </style>
 
@@ -58,52 +83,51 @@
   <title>Episodes</title>
 </svelte:head>
 
-<div class="episode-bg" />
-<section>
-  <div class="section-content-center font-white">
-    <h1 class="app-decor">Episodes</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, nostrum!
-      Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum odit
-      excepturi voluptas ad!
-    </p>
+<div
+  class="app-division-wrapper font-white default-section-header episode-main-bg">
+  <div class="section-wrapper">
+    <div class="center-section-wrapper">
+      <h1 class="app-decor">Episodes</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, nostrum!
+        Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum odit
+        excepturi voluptas ad!
+      </p>
+    </div>
   </div>
-</section>
+</div>
+
 <section>
   <div class="podcast-lists-wrapper">
-    <div class="podcast-list-item">
-      <div class="podcast-img-wrapper">
-        <img src="/img/podcast-item-img.svg" alt="" />
-      </div>
-      <div class="podcast-info-wrapper">
-        <h1>EP. 001 - The Power Of Now</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum
-          quasi ea, distinctio labore, obcaecati aliquid nesciunt soluta libero
-          dignissimos ducimus molestiae non ad porro omnis voluptatum ipsum.
-          Quas deleniti soluta similique blanditiis exercitationem!
-        </p>
-        <div>
-          <small>January 28, 2020 28min Category</small>
-        </div>
-      </div>
-    </div>
-    <div class="podcast-list-item">
-      <div class="podcast-img-wrapper">
-        <img src="/img/podcast-item-img.svg" alt="" />
-      </div>
-      <div class="podcast-info-wrapper">
-        <h1>EP. 001 - The Power Of Now</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum
-          quasi ea, distinctio labore, obcaecati aliquid nesciunt soluta libero
-          dignissimos ducimus molestiae non ad porro omnis voluptatum ipsum.
-          Quas deleniti soluta similique blanditiis exercitationem!
-        </p>
-        <div>
-          <small>January 28, 2020 28min Category</small>
-        </div>
-      </div>
-    </div>
+    {#await $episodes}
+      <p>Loading...</p>
+    {:then data}
+      {#if data.data}
+        {#each data.data.episodes.nodes as episode, i}
+          <a href="episodes/{episode.slug}">
+            <div class="podcast-list-item">
+              <div class="podcast-img-wrapper">
+                <img
+                  src={episode.episodes_gql.episodeThumbnail.sourceUrl}
+                  alt="" />
+              </div>
+              <div class="podcast-info-wrapper">
+                <h1>
+                  {@html episode.title}
+                </h1>
+                <p>{episode.episodes_gql.excerpt}</p>
+                <div>
+                  <small>
+                    {moment(episode.date).format('MMMM Do, YYYY')} - {episode.episodes_gql.duration}
+                  </small>
+                </div>
+              </div>
+            </div>
+          </a>
+        {/each}
+      {:else}
+        <p>ERROR!!</p>
+      {/if}
+    {/await}
   </div>
 </section>

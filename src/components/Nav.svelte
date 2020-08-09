@@ -1,5 +1,5 @@
 <script>
-  // export let segment;
+  export let segment;
   let isMobileMenu = false;
 
   function toggleMenu() {
@@ -8,6 +8,15 @@
 </script>
 
 <style lang="scss">
+  nav {
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    @media screen and (max-width: 425px) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
   .menu-wrapper {
     display: flex;
   }
@@ -41,6 +50,9 @@
     z-index: 9;
     padding: 2rem;
     display: flex;
+    z-index: 99999999999;
+    height: 100vh;
+    position: fixed;
     .close-btn {
       position: absolute;
       right: 17px;
@@ -56,6 +68,7 @@
       & li {
         display: flex;
         justify-content: flex-start;
+        margin: 1rem 0;
       }
     }
     .mobile-menu-items {
@@ -72,65 +85,74 @@
   </div>
   <div class="menu-desktop menu-wrapper">
     <ul>
-      <li>
-        <a href="/">Home</a>
+      <li aria-current={segment === undefined ? 'page' : undefined}>
+        <a rel="prefetch" href="/">Home</a>
       </li>
-      <li>
-        <a href="episodes">Episodes</a>
+      <li aria-current={segment === 'episodes' ? 'page' : undefined}>
+        <a rel="prefetch" href="episodes">Episodes</a>
       </li>
-      <li>
-        <a href="about">About</a>
+      <li aria-current={segment === 'about' ? 'page' : undefined}>
+        <a rel="prefetch" href="about">About</a>
       </li>
-      <li>
-        <a href="resources">Resources</a>
+      <li aria-current={segment === 'resources' ? 'page' : undefined}>
+        <a rel="prefetch" href="resources">Resources</a>
       </li>
-      <li>
-        <a href="contact">Contact</a>
+      <li aria-current={segment === 'contact' ? 'page' : undefined}>
+        <a rel="prefetch" href="contact">Contact</a>
       </li>
     </ul>
-    <button class="listen-btn">
-      <span>Listen</span>
-      <span>
-        <svg
-          id="rss"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="17.5"
-          viewBox="0 0 17.5 17.5">
-          <g id="Group_54" data-name="Group 54" transform="translate(0 12.672)">
-            <g id="Group_53" data-name="Group 53" transform="translate(0 0)">
-              <circle
-                id="Ellipse_8"
-                data-name="Ellipse 8"
-                cx="2.5"
-                cy="2.5"
-                r="2.5"
-                transform="translate(0 -0.173)"
-                fill="#fff" />
+    <a href="episodes">
+
+      <button class="listen-btn">
+        <span>Listen</span>
+        <span>
+          <svg
+            id="rss"
+            xmlns="http://www.w3.org/2000/svg"
+            width="17.5"
+            height="17.5"
+            viewBox="0 0 17.5 17.5">
+            <g
+              id="Group_54"
+              data-name="Group 54"
+              transform="translate(0 12.672)">
+              <g id="Group_53" data-name="Group 53" transform="translate(0 0)">
+                <circle
+                  id="Ellipse_8"
+                  data-name="Ellipse 8"
+                  cx="2.5"
+                  cy="2.5"
+                  r="2.5"
+                  transform="translate(0 -0.173)"
+                  fill="#fff" />
+              </g>
             </g>
-          </g>
-          <g id="Group_56" data-name="Group 56" transform="translate(0 5.834)">
-            <g id="Group_55" data-name="Group 55">
-              <path
-                id="Path_386"
-                data-name="Path 386"
-                d="M0,149.344v3.334a8.342,8.342,0,0,1,8.334,8.333h3.332A11.68,11.68,0,0,0,0,149.344Z"
-                transform="translate(0 -149.344)"
-                fill="#fff" />
+            <g
+              id="Group_56"
+              data-name="Group 56"
+              transform="translate(0 5.834)">
+              <g id="Group_55" data-name="Group 55">
+                <path
+                  id="Path_386"
+                  data-name="Path 386"
+                  d="M0,149.344v3.334a8.342,8.342,0,0,1,8.334,8.333h3.332A11.68,11.68,0,0,0,0,149.344Z"
+                  transform="translate(0 -149.344)"
+                  fill="#fff" />
+              </g>
             </g>
-          </g>
-          <g id="Group_58" data-name="Group 58">
-            <g id="Group_57" data-name="Group 57">
-              <path
-                id="Path_387"
-                data-name="Path 387"
-                d="M0,0V3.334A14.182,14.182,0,0,1,14.167,17.5H17.5A17.519,17.519,0,0,0,0,0Z"
-                fill="#fff" />
+            <g id="Group_58" data-name="Group 58">
+              <g id="Group_57" data-name="Group 57">
+                <path
+                  id="Path_387"
+                  data-name="Path 387"
+                  d="M0,0V3.334A14.182,14.182,0,0,1,14.167,17.5H17.5A17.519,17.519,0,0,0,0,0Z"
+                  fill="#fff" />
+              </g>
             </g>
-          </g>
-        </svg>
-      </span>
-    </button>
+          </svg>
+        </span>
+      </button>
+    </a>
   </div>
   <div class="menu-icon" on:click={toggleMenu}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -148,15 +170,21 @@
     </div>
     <div class="mobile-menu-items">
       <ul>
-        <li>
-          <a href="/">Home</a>
+        <li aria-current={segment === undefined ? 'page' : undefined}>
+          <a rel="prefetch" href=".">Home</a>
         </li>
-        <li>
-          <a href="episodes">Episodes</a>
+        <li aria-current={segment === 'episodes' ? 'page' : undefined}>
+          <a rel="prefetch" href="episodes">Episodes</a>
         </li>
-        <li>About</li>
-        <li>Resources</li>
-        <li>Contact</li>
+        <li aria-current={segment === 'about' ? 'page' : undefined}>
+          <a rel="prefetch" href="about">About</a>
+        </li>
+        <li aria-current={segment === 'resources' ? 'page' : undefined}>
+          <a rel="prefetch" href="resources">Resources</a>
+        </li>
+        <li aria-current={segment === 'contact' ? 'page' : undefined}>
+          <a rel="prefetch" href="contact">Contact</a>
+        </li>
       </ul>
 
       <button class="listen-btn">
