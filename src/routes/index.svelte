@@ -11,6 +11,10 @@
     z-index: -1;
     height: 114vh;
     width: 100%;
+    @media screen and (min-width: 1025px) {
+      background-position-x: 25rem;
+      background-size: 100% 100%;
+    }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/red-section.svg");
     }
@@ -29,6 +33,10 @@
     z-index: -1;
     height: 100%;
     width: 100%;
+    @media screen and (min-width: 1025px) {
+      background-position-x: -10rem;
+      background-size: 100% 100%;
+    }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/yellow-section.svg");
     }
@@ -63,6 +71,13 @@
     z-index: -1;
     height: 100%;
     width: 100%;
+    @media screen and (min-width: 1025px) {
+      background-position-x: 6rem;
+      background-size: 100% 100%;
+      .section-wrapper {
+        min-height: 186vh;
+      }
+    }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/blue-section.svg");
     }
@@ -80,6 +95,12 @@
     background-size: cover;
     position: relative;
     z-index: -1;
+    @media screen and (min-width: 1025px) {
+      background-size: 100% 100%;
+      .section-wrapper {
+        min-height: 126vh;
+      }
+    }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/grey-section.svg");
     }
@@ -95,9 +116,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    height: 100%;
-    width: 100%;
     position: relative;
+    @media screen and (min-width: 1025px) {
+      background-size: 100% 100%;
+      .section-wrapper {
+        min-height: 89vh;
+      }
+    }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/red-section-contact.svg");
     }
