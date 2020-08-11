@@ -4,7 +4,7 @@
 
 <style lang="scss">
   .first-section-bg {
-    background-image: url("/img/red-section-bg.svg");
+    background-image: url("/img/home-bgs/section-one.svg");
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -12,8 +12,8 @@
     // height: 114vh;
     width: 100%;
     @media screen and (min-width: 1025px) {
-      background-position-x: 25rem;
-      background-size: 100% 100%;
+      // background-position-x: 25rem;
+      // background-size: 100% 100%;
     }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/red-section.svg");
@@ -26,16 +26,15 @@
     }
   }
   .second-section-bg {
-    background-image: url("/img/yellow-section-bg.svg");
+    background-image: url("/img/home-bgs/section-two.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
-    height: 100%;
-    width: 100%;
     @media screen and (min-width: 1025px) {
+      // background-position-x: -10rem;
+      // background-size: 100% 100%;
       background-position-x: -10rem;
-      background-size: 100% 100%;
     }
     @media screen and (max-width: 1024px) {
       background-image: url("/img/1024/yellow-section.svg");
@@ -64,16 +63,12 @@
     }
   }
   .third-section-bg {
-    background-image: url("/img/blue-section-bg.svg");
+    background-image: url("/img/home-bgs/section-three.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
-    height: 100%;
-    width: 100%;
     @media screen and (min-width: 1025px) {
-      background-position-x: 6rem;
-      background-size: 100% 100%;
       .section-wrapper {
         min-height: 186vh;
       }
@@ -90,13 +85,12 @@
     }
   }
   .fourth-section-bg {
-    background-image: url("/img/grey-section-bg.svg");
+    background-image: url("/img/home-bgs/section-four.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
     @media screen and (min-width: 1025px) {
-      background-size: 100% 100%;
       .section-wrapper {
         min-height: 126vh;
       }
@@ -112,13 +106,12 @@
     }
   }
   .fifth-section-bg {
-    background-image: url("/img/contact-us-bg.svg");
+    background-image: url("/img/home-bgs/section-five.svg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     position: relative;
     @media screen and (min-width: 1025px) {
-      background-size: 100% 100%;
       .section-wrapper {
         min-height: 89vh;
       }
