@@ -9,7 +9,7 @@
     background-size: cover;
     top: 0;
     z-index: -1;
-    height: 114vh;
+    // height: 114vh;
     width: 100%;
     @media screen and (min-width: 1025px) {
       background-position-x: 25rem;
