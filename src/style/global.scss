@@ -748,6 +748,9 @@ nav {
   }
 
   .fifth-section {
+    @media screen and (min-width: 1441px) {
+      height: 76rem !important;
+    }
     @media screen and (max-width: 768px) {
       img {
         height: 65rem !important;
