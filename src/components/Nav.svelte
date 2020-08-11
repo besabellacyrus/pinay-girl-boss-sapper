@@ -12,6 +12,7 @@
     position: absolute;
     transform: translate(-50%);
     left: 50%;
+    z-index: 999999;
     @media screen and (max-width: 425px) {
       left: 50%;
       transform: translate(-50%, 0);
