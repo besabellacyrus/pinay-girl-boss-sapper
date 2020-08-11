@@ -480,11 +480,11 @@
   </div>
 </div>
 
-<div class="main-wrap">
-  <figure class="app-img-figure fifth-section">
+<div class="main-wrap fifth-section">
+  <figure class="app-img-figure">
     <img src="/img/home-bgs/section-five.svg" alt="" />
   </figure>
-  <div class="app-division-wrapper">
+  <div class="app-division-wrapper fifth-section-wrapper">
     <div class="section-wrapper">
       <div class="center-section-wrapper home-contact-us">
         <h1 class="app-decor">Contact Us</h1>
