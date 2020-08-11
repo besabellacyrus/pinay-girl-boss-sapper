@@ -253,6 +253,7 @@
     bottom: 0;
     width: 100%;
     margin: 0;
+    z-index: -1;
     &:before {
       content: "";
       display: block;
