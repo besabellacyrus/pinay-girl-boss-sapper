@@ -420,7 +420,7 @@
         <h1 class="app-decor">About Us</h1>
         <div class="about-us-founders">
           <div>
-            <img src="/img/founder-one.png" alt="" />
+            <img src="/img/founder-two.png" alt="" />
             <h3>Name Here</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
@@ -448,7 +448,7 @@
             </div>
           </div>
           <div>
-            <img src="/img/founder-two.png" alt="" />
+            <img src="/img/founder-one.png" alt="" />
             <h3>Name Here</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
