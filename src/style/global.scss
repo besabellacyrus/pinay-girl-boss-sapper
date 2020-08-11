@@ -650,7 +650,7 @@ h1 {
   font-family: 'RobotoMedium';
   line-height: 1.2em;
   position: relative;
-  z-index: -1;
+  // z-index: -1;
   @media screen and (max-width: 1024px) {
     margin-bottom: 2rem;
   }
@@ -728,6 +728,32 @@ nav {
   border: 1px solid #2a587b;
   color: $gray;
 }
+
+.third-section,
+  .fourth-section {
+    img {
+      @media screen and (max-width: 425px) {
+        height: 100% !important;
+      }
+    }
+  }
+  .main-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .home-latest-episode-wrapper {
+    @media screen and (min-width: 1366px) {
+      height: 125rem;
+    }
+  }
+
+  .fifth-section {
+    @media screen and (max-width: 768px) {
+      img {
+        height: 65rem !important;
+      }
+    }
+  }
 
  
 
