@@ -22,6 +22,7 @@
 </script>
 
 <script>
+  import TransitionWrapper from "../../components/TransitionWrapper.svelte";
   import { restore, query } from "svelte-apollo";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
@@ -83,51 +84,54 @@
   <title>Episodes</title>
 </svelte:head>
 
-<div
-  class="app-division-wrapper font-white default-section-header episode-main-bg">
-  <div class="section-wrapper">
-    <div class="center-section-wrapper">
-      <h1 class="app-decor">Episodes</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, nostrum!
-        Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum odit
-        excepturi voluptas ad!
-      </p>
+<TransitionWrapper>
+  <div
+    class="app-division-wrapper font-white default-section-header
+    episode-main-bg">
+    <div class="section-wrapper">
+      <div class="center-section-wrapper">
+        <h1 class="app-decor">Episodes</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
+          nostrum! Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum
+          odit excepturi voluptas ad!
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
-<section>
-  <div class="podcast-lists-wrapper">
-    {#await $episodes}
-      <p>Loading...</p>
-    {:then data}
-      {#if data.data}
-        {#each data.data.episodes.nodes as episode, i}
-          <a href="episodes/{episode.slug}">
-            <div class="podcast-list-item">
-              <div class="podcast-img-wrapper">
-                <img
-                  src={episode.episodes_gql.episodeThumbnail.sourceUrl}
-                  alt="" />
-              </div>
-              <div class="podcast-info-wrapper">
-                <h1>
-                  {@html episode.title}
-                </h1>
-                <p>{episode.episodes_gql.excerpt}</p>
-                <div>
-                  <small>
-                    {moment(episode.date).format('MMMM Do, YYYY')} - {episode.episodes_gql.duration}
-                  </small>
+  <section>
+    <div class="podcast-lists-wrapper">
+      {#await $episodes}
+        <p>Loading...</p>
+      {:then data}
+        {#if data.data}
+          {#each data.data.episodes.nodes as episode, i}
+            <a href="episodes/{episode.slug}">
+              <div class="podcast-list-item">
+                <div class="podcast-img-wrapper">
+                  <img
+                    src={episode.episodes_gql.episodeThumbnail.sourceUrl}
+                    alt="" />
+                </div>
+                <div class="podcast-info-wrapper">
+                  <h1>
+                    {@html episode.title}
+                  </h1>
+                  <p>{episode.episodes_gql.excerpt}</p>
+                  <div>
+                    <small>
+                      {moment(episode.date).format('MMMM Do, YYYY')} - {episode.episodes_gql.duration}
+                    </small>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        {/each}
-      {:else}
-        <p>ERROR!!</p>
-      {/if}
-    {/await}
-  </div>
-</section>
+            </a>
+          {/each}
+        {:else}
+          <p>ERROR!!</p>
+        {/if}
+      {/await}
+    </div>
+  </section>
+</TransitionWrapper>

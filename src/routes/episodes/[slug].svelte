@@ -8,17 +8,18 @@
     return {
       cache: await client.query({
         query: EPISODE,
-        variables: { slug },
+        variables: { slug }
       }),
       episodes: await client.query({
-        query: EPISODES,
+        query: EPISODES
       }),
-      slug,
+      slug
     };
   }
 </script>
 
 <script>
+  import TransitionWrapper from "../../components/TransitionWrapper.svelte";
   import { restore, query } from "svelte-apollo";
   import { goto } from "@sapper/app";
   import { onMount, beforeUpdate, afterUpdate } from "svelte";
@@ -39,7 +40,7 @@
     console.log("beforeUpdate");
     const eps = episodes.data.episodes.nodes;
     const cat = cache.data.episode;
-    const ddd = (e) => e.slug === slug;
+    const ddd = e => e.slug === slug;
     const i = eps.findIndex(ddd);
     next = eps[i - 1] || null;
     prev = eps[i + 1] || null;
@@ -55,7 +56,7 @@
 
   const episode = query(client, {
     query: EPISODE,
-    variables: { slug },
+    variables: { slug }
   });
 
   const goNext = async () => {
@@ -233,119 +234,121 @@
   <title>Single Podcast</title>
 </svelte:head>
 
-{#await cache}
-  <p>Loading...</p>
-{:then data}
-  {#if data.data}
-    <div class="single-episode-main-bg">
-      <div class="inner-page-wrapper">
-        <h1 class="app-decor">
-          {@html data.data.episode.title}
-        </h1>
-        <p class="episode-date">
-          {moment(data.data.episode.date).format('MMMM Do, YYYY')} - {data.data.episode.episodes_gql.duration}
-        </p>
-        <div class="podcast-player">
-          {@html data.data.episode.episodes_gql.embed}
-        </div>
-        <div class="episode-information-wrapper">
-          <p>{data.data.episode.episodes_gql.information}</p>
+<TransitionWrapper>
+  {#await cache}
+    <p>Loading...</p>
+  {:then data}
+    {#if data.data}
+      <div class="single-episode-main-bg">
+        <div class="inner-page-wrapper">
+          <h1 class="app-decor">
+            {@html data.data.episode.title}
+          </h1>
+          <p class="episode-date">
+            {moment(data.data.episode.date).format('MMMM Do, YYYY')} - {data.data.episode.episodes_gql.duration}
+          </p>
+          <div class="podcast-player">
+            {@html data.data.episode.episodes_gql.embed}
+          </div>
+          <div class="episode-information-wrapper">
+            <p>{data.data.episode.episodes_gql.information}</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    {#if data.data.episode.episodes_gql.speaker}
-      <div class="common-wrapper about-speaker">
-        <h3>About the Speaker</h3>
-        <div class="speaker-info-wrapper">
-          <div class="speaker-name-wrapper">
-            <h4>
-              {data.data.episode.episodes_gql.speaker.authors_gql.name}
-              {data.data.episode.episodes_gql.speaker.authors_gql.surname}
-            </h4>
-            <small>
-              {data.data.episode.episodes_gql.speaker.authors_gql.profession}
-            </small>
-            <div class="speaker-bio">
-              {@html data.data.episode.episodes_gql.speaker.authors_gql.bio}
+      {#if data.data.episode.episodes_gql.speaker}
+        <div class="common-wrapper about-speaker">
+          <h3>About the Speaker</h3>
+          <div class="speaker-info-wrapper">
+            <div class="speaker-name-wrapper">
+              <h4>
+                {data.data.episode.episodes_gql.speaker.authors_gql.name}
+                {data.data.episode.episodes_gql.speaker.authors_gql.surname}
+              </h4>
+              <small>
+                {data.data.episode.episodes_gql.speaker.authors_gql.profession}
+              </small>
+              <div class="speaker-bio">
+                {@html data.data.episode.episodes_gql.speaker.authors_gql.bio}
+              </div>
             </div>
-          </div>
-          <div>
-            <img src="img/founder-two.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="common-wrapper social-media">
-        {#if data.data.episode.episodes_gql.speaker.authors_gql.facebook}
-          <div>
-            <img src="img/instagram.svg" alt="" />
-            <span>
-              {data.data.episode.episodes_gql.speaker.authors_gql.facebook}
-            </span>
-          </div>
-        {/if}
-        {#if data.data.episode.episodes_gql.speaker.authors_gql.linkedin}
-          <div>
-            <img src="img/linkedin.svg" alt="" />
-            <span>
-              {data.data.episode.episodes_gql.speaker.authors_gql.linkedin}
-            </span>
-          </div>
-        {/if}
-        {#if data.data.episode.episodes_gql.speaker.authors_gql.instagram}
-          <div>
-            <img src="img/facebook.svg" alt="" />
-            <span>
-              {data.data.episode.episodes_gql.speaker.authors_gql.instagram}
-            </span>
-          </div>
-        {/if}
-      </div>
-    {/if}
-    {#if data.data.episode.episodes_gql.resources}
-      <div class="common-wrapper about-resources">
-        <h3>Resources</h3>
-        <div>
-          {@html data.data.episode.episodes_gql.resources}
-        </div>
-      </div>
-    {/if}
-  {/if}
-{/await}
-
-<div class="common-wrapper">
-  <div class="pagination-wrapper">
-    <div class="pagination-left">
-      {#if prev}
-        <div on:click={goPrev}>
-          <h2>PREVIOUS EPISODE</h2>
-          <div class="pagination-content-left">
-            <img src={prev.episodes_gql.episodeThumbnail.sourceUrl} alt="" />
             <div>
-              <h3>
-                {@html prev.title}
-              </h3>
-              <p>{prev.episodes_gql.information}</p>
+              <img src="img/founder-two.png" alt="" />
             </div>
+          </div>
+        </div>
+        <div class="common-wrapper social-media">
+          {#if data.data.episode.episodes_gql.speaker.authors_gql.facebook}
+            <div>
+              <img src="img/instagram.svg" alt="" />
+              <span>
+                {data.data.episode.episodes_gql.speaker.authors_gql.facebook}
+              </span>
+            </div>
+          {/if}
+          {#if data.data.episode.episodes_gql.speaker.authors_gql.linkedin}
+            <div>
+              <img src="img/linkedin.svg" alt="" />
+              <span>
+                {data.data.episode.episodes_gql.speaker.authors_gql.linkedin}
+              </span>
+            </div>
+          {/if}
+          {#if data.data.episode.episodes_gql.speaker.authors_gql.instagram}
+            <div>
+              <img src="img/facebook.svg" alt="" />
+              <span>
+                {data.data.episode.episodes_gql.speaker.authors_gql.instagram}
+              </span>
+            </div>
+          {/if}
+        </div>
+      {/if}
+      {#if data.data.episode.episodes_gql.resources}
+        <div class="common-wrapper about-resources">
+          <h3>Resources</h3>
+          <div>
+            {@html data.data.episode.episodes_gql.resources}
           </div>
         </div>
       {/if}
-    </div>
-    <div class="pagination-right">
-      {#if next}
-        <div on:click={goNext}>
-          <h2>NEXT EPISODE</h2>
-          <div class="pagination-content-right">
-            <img src={next.episodes_gql.episodeThumbnail.sourceUrl} alt="" />
-            <div>
-              <h3>
-                {@html next.title}
-              </h3>
-              <p>{next.episodes_gql.information}</p>
+    {/if}
+  {/await}
+
+  <div class="common-wrapper">
+    <div class="pagination-wrapper">
+      <div class="pagination-left">
+        {#if prev}
+          <div on:click={goPrev}>
+            <h2>PREVIOUS EPISODE</h2>
+            <div class="pagination-content-left">
+              <img src={prev.episodes_gql.episodeThumbnail.sourceUrl} alt="" />
+              <div>
+                <h3>
+                  {@html prev.title}
+                </h3>
+                <p>{prev.episodes_gql.information}</p>
+              </div>
             </div>
           </div>
-        </div>
-      {/if}
+        {/if}
+      </div>
+      <div class="pagination-right">
+        {#if next}
+          <div on:click={goNext}>
+            <h2>NEXT EPISODE</h2>
+            <div class="pagination-content-right">
+              <img src={next.episodes_gql.episodeThumbnail.sourceUrl} alt="" />
+              <div>
+                <h3>
+                  {@html next.title}
+                </h3>
+                <p>{next.episodes_gql.information}</p>
+              </div>
+            </div>
+          </div>
+        {/if}
+      </div>
     </div>
   </div>
-</div>
+</TransitionWrapper>

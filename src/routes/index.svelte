@@ -1,5 +1,5 @@
 <script>
-
+  import TransitionWrapper from "../components/TransitionWrapper.svelte";
 </script>
 
 <style lang="scss">
@@ -9,7 +9,6 @@
     background-size: cover;
     top: 0;
     z-index: -1;
-    // height: 114vh;
     width: 100%;
     @media screen and (min-width: 1025px) {
       // background-position-x: 25rem;
@@ -284,222 +283,223 @@
 <svelte:head>
   <title>Home</title>
 </svelte:head>
-
-<div class="main-wrapp">
-  <figure class="app-img-figure">
-    <img src="/img/home-bgs/section-one.svg" alt="" />
-  </figure>
-  <div class="app-division-wrapper">
-    <div class="section-wrapper first-section-container">
-      <div>
-        <h1 class="app-decor">Lorem Ipsum Dolor Sit Amet</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-          nihil provident voluptatum? At quisquam, sequi repellendus officia
-          voluptatibus libero recusandae, quia perferendis tenetur cupiditate
-          assumenda modi in, dolorum provident laudantium! Mollitia quas rem
-          inventore.
-        </p>
-        <div class="app-btn mt-10">
-          <button>
-            <span>Listen to our Podcast</span>
-            <span>
-              <svg
-                id="rss"
-                xmlns="http://www.w3.org/2000/svg"
-                width="17.5"
-                height="17.5"
-                viewBox="0 0 17.5 17.5">
-                <g
-                  id="Group_54"
-                  data-name="Group 54"
-                  transform="translate(0 12.672)">
+<TransitionWrapper>
+  <div class="main-wrap">
+    <figure class="app-img-figure">
+      <img src="/img/home-bgs/section-one.svg" alt="" />
+    </figure>
+    <div class="app-division-wrapper">
+      <div class="section-wrapper first-section-container">
+        <div>
+          <h1 class="app-decor">Lorem Ipsum Dolor Sit Amet</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+            nihil provident voluptatum? At quisquam, sequi repellendus officia
+            voluptatibus libero recusandae, quia perferendis tenetur cupiditate
+            assumenda modi in, dolorum provident laudantium! Mollitia quas rem
+            inventore.
+          </p>
+          <div class="app-btn mt-10">
+            <button>
+              <span>Listen to our Podcast</span>
+              <span>
+                <svg
+                  id="rss"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.5"
+                  height="17.5"
+                  viewBox="0 0 17.5 17.5">
                   <g
-                    id="Group_53"
-                    data-name="Group 53"
-                    transform="translate(0 0)">
-                    <circle
-                      id="Ellipse_8"
-                      data-name="Ellipse 8"
-                      cx="2.5"
-                      cy="2.5"
-                      r="2.5"
-                      transform="translate(0 -0.173)"
-                      fill="#fff" />
+                    id="Group_54"
+                    data-name="Group 54"
+                    transform="translate(0 12.672)">
+                    <g
+                      id="Group_53"
+                      data-name="Group 53"
+                      transform="translate(0 0)">
+                      <circle
+                        id="Ellipse_8"
+                        data-name="Ellipse 8"
+                        cx="2.5"
+                        cy="2.5"
+                        r="2.5"
+                        transform="translate(0 -0.173)"
+                        fill="#fff" />
+                    </g>
                   </g>
-                </g>
-                <g
-                  id="Group_56"
-                  data-name="Group 56"
-                  transform="translate(0 5.834)">
-                  <g id="Group_55" data-name="Group 55">
-                    <path
-                      id="Path_386"
-                      data-name="Path 386"
-                      d="M0,149.344v3.334a8.342,8.342,0,0,1,8.334,8.333h3.332A11.68,11.68,0,0,0,0,149.344Z"
-                      transform="translate(0 -149.344)"
-                      fill="#fff" />
+                  <g
+                    id="Group_56"
+                    data-name="Group 56"
+                    transform="translate(0 5.834)">
+                    <g id="Group_55" data-name="Group 55">
+                      <path
+                        id="Path_386"
+                        data-name="Path 386"
+                        d="M0,149.344v3.334a8.342,8.342,0,0,1,8.334,8.333h3.332A11.68,11.68,0,0,0,0,149.344Z"
+                        transform="translate(0 -149.344)"
+                        fill="#fff" />
+                    </g>
                   </g>
-                </g>
-                <g id="Group_58" data-name="Group 58">
-                  <g id="Group_57" data-name="Group 57">
-                    <path
-                      id="Path_387"
-                      data-name="Path 387"
-                      d="M0,0V3.334A14.182,14.182,0,0,1,14.167,17.5H17.5A17.519,17.519,0,0,0,0,0Z"
-                      fill="#fff" />
+                  <g id="Group_58" data-name="Group 58">
+                    <g id="Group_57" data-name="Group 57">
+                      <path
+                        id="Path_387"
+                        data-name="Path 387"
+                        d="M0,0V3.334A14.182,14.182,0,0,1,14.167,17.5H17.5A17.519,17.519,0,0,0,0,0Z"
+                        fill="#fff" />
+                    </g>
                   </g>
-                </g>
-              </svg>
-            </span>
-          </button>
-        </div>
-      </div>
-      <img src="/img/woman-illustration-one.svg" alt="" />
-    </div>
-  </div>
-</div>
-
-<div class="main-wrap">
-  <figure class="app-img-figure">
-    <img src="/img/home-bgs/section-two.svg" alt="" />
-  </figure>
-  <div class="app-division-wrapper">
-    <div class="section-wrapper">
-      <img src="/img/woman-illustration-two.svg" alt="" />
-      <div>
-        <h1 class="app-decor">Lorem Ipsum Dolor Sit Amet</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-          nihil provident voluptatum? At quisquam, sequi repellendus officia
-          voluptatibus libero recusandae, quia perferendis tenetur cupiditate
-          assumenda modi in, dolorum provident laudantium! Mollitia quas rem
-          inventore.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="main-wrap">
-  <figure class="app-img-figure third-section">
-    <img src="/img/home-bgs/section-three.svg" alt="" />
-  </figure>
-  <div class="app-division-wrapper">
-    <div class="section-wrapper home-latest-episode-wrapper">
-      <div class="center-section-wrapper">
-        <h1 class="app-decor">Lorem Ipsum Dolor sit Amet, consectetur</h1>
-        <p class="my-10">Our Latest Episode</p>
-        <div class="player-wrapper">
-          <div class="player">1</div>
-        </div>
-        <p class="my-20">More Episodes</p>
-        <div class="featured-episodes-wrapper">
-          <a href="">
-            <img src="/img/podcast-item-img.png" alt="" />
-          </a>
-          <a href="">
-            <img src="/img/podcast-item-img.png" alt="" />
-          </a>
-          <a href="">
-            <img src="/img/podcast-item-img.png" alt="" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="main-wrap">
-  <figure class="app-img-figure fourth-section">
-    <img src="/img/home-bgs/section-four.svg" alt="" />
-  </figure>
-  <div class="app-division-wrapper">
-    <div class="section-wrapper">
-      <div class="center-section-wrapper home-about-us">
-        <h1 class="app-decor">About Us</h1>
-        <div class="about-us-founders">
-          <div>
-            <img src="/img/founder-two.png" alt="" />
-            <h3>Name Here</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              ab nam commodi officiis eius maiores illum est repudiandae
-              accusantium. Quisquam blanditiis provident, distinctio error
-              corrupti nemo! Soluta similique voluptatibus sint vel at! Fugit,
-              asperiores!
-            </p>
-            <div class="social-media">
-              <div>
-                <a href="">
-                  <img src="/img/facebook.svg" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="/img/instagram.svg" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="/img/linkedin.svg" alt="" />
-                </a>
-              </div>
-            </div>
+                </svg>
+              </span>
+            </button>
           </div>
-          <div>
-            <img src="/img/founder-one.png" alt="" />
-            <h3>Name Here</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              ab nam commodi officiis eius maiores illum est repudiandae
-              accusantium. Quisquam blanditiis provident, distinctio error
-              corrupti nemo! Soluta similique voluptatibus sint vel at! Fugit,
-              asperiores!
-            </p>
-            <div class="social-media">
-              <div>
-                <a href="">
-                  <img src="/img/facebook.svg" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="/img/instagram.svg" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="/img/linkedin.svg" alt="" />
-                </a>
-              </div>
-            </div>
+        </div>
+        <img src="/img/woman-illustration-one.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="main-wrap">
+    <figure class="app-img-figure">
+      <img src="/img/home-bgs/section-two.svg" alt="" />
+    </figure>
+    <div class="app-division-wrapper">
+      <div class="section-wrapper">
+        <img src="/img/woman-illustration-two.svg" alt="" />
+        <div>
+          <h1 class="app-decor">Lorem Ipsum Dolor Sit Amet</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+            nihil provident voluptatum? At quisquam, sequi repellendus officia
+            voluptatibus libero recusandae, quia perferendis tenetur cupiditate
+            assumenda modi in, dolorum provident laudantium! Mollitia quas rem
+            inventore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-wrap">
+    <figure class="app-img-figure third-section">
+      <img src="/img/home-bgs/section-three.svg" alt="" />
+    </figure>
+    <div class="app-division-wrapper">
+      <div class="section-wrapper home-latest-episode-wrapper">
+        <div class="center-section-wrapper">
+          <h1 class="app-decor">Lorem Ipsum Dolor sit Amet, consectetur</h1>
+          <p class="my-10">Our Latest Episode</p>
+          <div class="player-wrapper">
+            <div class="player">1</div>
+          </div>
+          <p class="my-20">More Episodes</p>
+          <div class="featured-episodes-wrapper">
+            <a href="">
+              <img src="/img/podcast-item-img.png" alt="" />
+            </a>
+            <a href="">
+              <img src="/img/podcast-item-img.png" alt="" />
+            </a>
+            <a href="">
+              <img src="/img/podcast-item-img.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="main-wrap fifth-section">
-  <figure class="app-img-figure">
-    <img src="/img/home-bgs/section-five.svg" alt="" />
-  </figure>
-  <div class="app-division-wrapper fifth-section-wrapper">
-    <div class="section-wrapper">
-      <div class="center-section-wrapper home-contact-us">
-        <h1 class="app-decor">Contact Us</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis est
-          dolor harum recusandae! Nemo unde sed eum quaerat quisquam quo,
-          aspernatur voluptas amet!
-        </p>
-        <form action="">
-          <label for="">Email</label>
-          <input type="text" />
-          <button>Lorem Ipsum</button>
-        </form>
+  <div class="main-wrap">
+    <figure class="app-img-figure fourth-section">
+      <img src="/img/home-bgs/section-four.svg" alt="" />
+    </figure>
+    <div class="app-division-wrapper">
+      <div class="section-wrapper">
+        <div class="center-section-wrapper home-about-us">
+          <h1 class="app-decor">About Us</h1>
+          <div class="about-us-founders">
+            <div>
+              <img src="/img/founder-two.png" alt="" />
+              <h3>Name Here</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ab nam commodi officiis eius maiores illum est repudiandae
+                accusantium. Quisquam blanditiis provident, distinctio error
+                corrupti nemo! Soluta similique voluptatibus sint vel at! Fugit,
+                asperiores!
+              </p>
+              <div class="social-media">
+                <div>
+                  <a href="">
+                    <img src="/img/facebook.svg" alt="" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="/img/instagram.svg" alt="" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="/img/linkedin.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="/img/founder-one.png" alt="" />
+              <h3>Name Here</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                ab nam commodi officiis eius maiores illum est repudiandae
+                accusantium. Quisquam blanditiis provident, distinctio error
+                corrupti nemo! Soluta similique voluptatibus sint vel at! Fugit,
+                asperiores!
+              </p>
+              <div class="social-media">
+                <div>
+                  <a href="">
+                    <img src="/img/facebook.svg" alt="" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="/img/instagram.svg" alt="" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="/img/linkedin.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="main-wrap fifth-section">
+    <figure class="app-img-figure">
+      <img src="/img/home-bgs/section-five.svg" alt="" />
+    </figure>
+    <div class="app-division-wrapper fifth-section-wrapper">
+      <div class="section-wrapper">
+        <div class="center-section-wrapper home-contact-us">
+          <h1 class="app-decor">Contact Us</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+            est dolor harum recusandae! Nemo unde sed eum quaerat quisquam quo,
+            aspernatur voluptas amet!
+          </p>
+          <form action="">
+            <label for="">Email</label>
+            <input type="text" />
+            <button>Lorem Ipsum</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</TransitionWrapper>

@@ -1,4 +1,5 @@
 <script>
+  import TransitionWrapper from "../components/TransitionWrapper.svelte";
   import Nav from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
   export let segment;
@@ -8,10 +9,12 @@
   @import "./style/global.scss";
 </style>
 
-<Nav {segment} />
+<TransitionWrapper>
+  <Nav {segment} />
 
-<main>
-  <slot />
-</main>
+  <main>
+    <slot />
+  </main>
 
-<Footer />
+  <Footer />
+</TransitionWrapper>
