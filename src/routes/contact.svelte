@@ -83,28 +83,35 @@
     </div>
   </div>
   <div class="plain-wrapper">
-    <form on:submit|preventDefault={handleSubmit}>
-      <label for="email">Email</label>
-      <input id="email" type="email" bind:value={$contact.email} required />
-      <label for="subject">Subject</label>
-      <input id="subject" type="text" bind:value={$contact.subject} required />
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        cols="30"
-        rows="10"
-        bind:value={$contact.message}
-        required />
-      <div class="app-btn">
-        <button>
-          {#if !loading}
-            <span>Submit</span>
-          {:else}
-            <span>Loading...</span>
-          {/if}
-        </button>
-      </div>
-    </form>
-    <div class="success-message" />
+    {#if !sent}
+      <form on:submit|preventDefault={handleSubmit}>
+        <label for="email">Email</label>
+        <input id="email" type="email" bind:value={$contact.email} required />
+        <label for="subject">Subject</label>
+        <input
+          id="subject"
+          type="text"
+          bind:value={$contact.subject}
+          required />
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          cols="30"
+          rows="10"
+          bind:value={$contact.message}
+          required />
+        <div class="app-btn">
+          <button>
+            {#if !loading}
+              <span>Submit</span>
+            {:else}
+              <span>Loading...</span>
+            {/if}
+          </button>
+        </div>
+      </form>
+    {:else}
+      <p>Thank you for messaging us!</p>
+    {/if}
   </div>
 </TransitionWrapper>

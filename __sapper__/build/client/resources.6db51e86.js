@@ -1,4 +1,4 @@
-import{S as e,i as n,s,T as t,j as r,k as a,a as c,c as o,q as l,n as i,o as d,p as u,d as f,b as m,e as h,u as p,f as v,m as g,t as w,g as E,h as b,v as q,w as I,r as k,x as D,y as $,z as y,A as x}from"./client.bb68672c.js";import{s as T,c as V,r as _,q as j}from"./svelte-apollo.es.4162e894.js";const B=T`
+import{S as e,i as n,s,T as t,j as r,k as a,a as c,c as o,q as l,n as i,o as d,p as u,d as f,b as m,e as h,u as p,f as v,m as g,t as w,g as E,h as b,v as q,w as I,r as k,x as D,y as $,z as y,A as x}from"./client.6a946f83.js";import{s as T,c as V,r as _,q as j}from"./svelte-apollo.es.17dfddd5.js";const B=T`
     query MyQuery {
     resources {
       nodes {
