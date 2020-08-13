@@ -57,6 +57,27 @@
 
 <svelte:head>
   <title>Resources</title>
+  <script>
+    (function(w, d, t, s, n) {
+      w.FlodeskObject = n;
+      var fn = function() {
+        (w[n].q = w[n].q || []).push(arguments);
+      };
+      w[n] = w[n] || fn;
+      var f = d.getElementsByTagName(t)[0];
+      var e = d.createElement(t);
+      var h = "?v=" + new Date().getTime();
+      e.async = true;
+      e.src = s + h;
+      f.parentNode.insertBefore(e, f);
+    })(
+      window,
+      document,
+      "script",
+      "https://assets.flodesk.com/universal.js",
+      "fd"
+    );
+  </script>
 </svelte:head>
 
 <TransitionWrapper>
@@ -111,13 +132,11 @@
     </div>
   </div>
 
-  <div class="plain-wrapper">
-    <div class="subscribe-wrapper">
-      <h1>Subscribe</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex neque
-        doloremque deserunt unde eum enim iusto incidunt, optio eaque facilis.
-      </p>
-    </div>
-  </div>
+  <div id="fd-form-5f3459b06267530026690ee8" />
+  <script>
+    window.fd("form", {
+      formId: "5f3459b06267530026690ee8",
+      containerEl: "#fd-form-5f3459b06267530026690ee8"
+    });
+  </script>
 </TransitionWrapper>

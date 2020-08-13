@@ -1,5 +1,40 @@
 <script>
   import TransitionWrapper from "../components/TransitionWrapper.svelte";
+  import { contact } from "../store/contact.js";
+
+  let loading = false;
+  let sent = false;
+
+  async function handleSubmit(event) {
+    loading = true;
+    if (!sent) {
+      let formData = new FormData();
+      formData.append("your-email", event.target.email.value);
+      formData.append("your-subject", event.target.subject.value);
+      formData.append("your-message", event.target.message.value);
+      const res = await fetch(
+        "http://pinaygirlboss.com/wp-api/wp-json/contact-form-7/v1/contact-forms/76/feedback",
+        {
+          method: "POST",
+          body: formData
+        }
+      )
+        .then(e => {
+          if (e.statusText === "OK") {
+            sent = true;
+            $contact.subject = "";
+            $contact.email = "";
+            $contact.message = "";
+          }
+          console.log({ e });
+          loading = false;
+        })
+        .catch(err => {
+          loading = false;
+          console.log({ err });
+        });
+    }
+  }
 </script>
 
 <style lang="scss">
@@ -48,16 +83,28 @@
     </div>
   </div>
   <div class="plain-wrapper">
-    <form action="">
-      <label for="">Email</label>
-      <input type="email" />
-      <label for="">Subject</label>
-      <input type="text" />
-      <label for="">Message</label>
-      <textarea name="" id="" cols="30" rows="10" />
+    <form on:submit|preventDefault={handleSubmit}>
+      <label for="email">Email</label>
+      <input id="email" type="email" bind:value={$contact.email} required />
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" bind:value={$contact.subject} required />
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        cols="30"
+        rows="10"
+        bind:value={$contact.message}
+        required />
       <div class="app-btn">
-        <button>Submit</button>
+        <button>
+          {#if !loading}
+            <span>Submit</span>
+          {:else}
+            <span>Loading...</span>
+          {/if}
+        </button>
       </div>
     </form>
+    <div class="success-message" />
   </div>
 </TransitionWrapper>

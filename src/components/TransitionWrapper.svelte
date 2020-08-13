@@ -9,14 +9,14 @@
 </script>
 
 <style>
-  .transition-wrapper {
+  div {
     min-height: 800px;
     position: relative;
   }
 </style>
 
 {#if show}
-  <div class="transition-wrapper" in:fadeIn out:fadeOut>
+  <div in:fadeIn out:fadeOut>
     <slot />
   </div>
 {/if}
