@@ -132,11 +132,23 @@
     </div>
   </div>
 
-  <div id="fd-form-5f3459b06267530026690ee8" />
-  <script>
-    window.fd("form", {
-      formId: "5f3459b06267530026690ee8",
-      containerEl: "#fd-form-5f3459b06267530026690ee8"
-    });
-  </script>
+  <div class="main-wrap fifth-section">
+    <figure class="app-img-figure">
+      <img src="/img/resources-bg.svg" alt="" />
+    </figure>
+    <div class="app-division-wrapper fifth-section-wrapper">
+      <div class="section-wrapper">
+        <div class="center-section-wrapper home-contact-us">
+          <div id="fd-form-5f3459b06267530026690ee8" />
+          <script>
+            window.fd("form", {
+              formId: "5f3459b06267530026690ee8",
+              containerEl: "#fd-form-5f3459b06267530026690ee8"
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </TransitionWrapper>
