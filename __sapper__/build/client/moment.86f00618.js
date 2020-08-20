@@ -1,4 +1,4 @@
-import{s as e,a as t,b as n,d as s}from"./svelte-apollo.es.ebbaf2ba.js";const i=e`
+import{s as e,a as t,b as n,d as s}from"./svelte-apollo.es.ea937eb4.js";const i=e`
   query MyQuery {
     episodes {
       nodes {

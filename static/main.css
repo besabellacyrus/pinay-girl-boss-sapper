@@ -442,6 +442,7 @@ code {
 
 img,
 svg,
+iframe,
 embed {
   display: block;
   vertical-align: middle;
