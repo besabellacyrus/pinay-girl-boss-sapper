@@ -244,7 +244,7 @@
     {#if data.data}
       <div class="single-episode-main-bg">
         <div class="inner-page-wrapper">
-          <h1 class="app-decor">
+          <h1 class="app-decor episode-title">
             {@html data.data.episode.title}
           </h1>
           <p class="episode-date">
