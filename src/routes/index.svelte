@@ -59,6 +59,10 @@
       @media screen and (min-width: 1024px) {
         width: 66%;
       }
+      iframe {
+        width: 100%;
+        height: 18rem;
+      }
     }
   }
   .third-section-bg {
@@ -245,6 +249,9 @@
       }
     }
   }
+  .first-image {
+    width: 143rem;
+  }
 </style>
 
 <svelte:head>
@@ -258,70 +265,70 @@
     <div class="app-division-wrapper">
       <div class="section-wrapper first-section-container">
         <div>
-          <h1 class="app-decor">Lorem Ipsum Dolor Sit Amet</h1>
+          <h1 class="app-decor">Hello! Welcome to Pinay Girl Boss</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-            nihil provident voluptatum? At quisquam, sequi repellendus officia
-            voluptatibus libero recusandae, quia perferendis tenetur cupiditate
-            assumenda modi in, dolorum provident laudantium! Mollitia quas rem
-            inventore.
+            We are a podcast and you can find us by searching Pinay Girl Boss on
+            Spotify and Apple Podcast.
           </p>
           <div class="app-btn mt-10">
-            <button>
-              <span>Listen to our Podcast</span>
-              <span>
-                <svg
-                  id="rss"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="17.5"
-                  height="17.5"
-                  viewBox="0 0 17.5 17.5">
-                  <g
-                    id="Group_54"
-                    data-name="Group 54"
-                    transform="translate(0 12.672)">
+            <a href="episodes">
+
+              <button>
+                <span>Listen to our Podcast</span>
+                <span>
+                  <svg
+                    id="rss"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.5"
+                    height="17.5"
+                    viewBox="0 0 17.5 17.5">
                     <g
-                      id="Group_53"
-                      data-name="Group 53"
-                      transform="translate(0 0)">
-                      <circle
-                        id="Ellipse_8"
-                        data-name="Ellipse 8"
-                        cx="2.5"
-                        cy="2.5"
-                        r="2.5"
-                        transform="translate(0 -0.173)"
-                        fill="#fff" />
+                      id="Group_54"
+                      data-name="Group 54"
+                      transform="translate(0 12.672)">
+                      <g
+                        id="Group_53"
+                        data-name="Group 53"
+                        transform="translate(0 0)">
+                        <circle
+                          id="Ellipse_8"
+                          data-name="Ellipse 8"
+                          cx="2.5"
+                          cy="2.5"
+                          r="2.5"
+                          transform="translate(0 -0.173)"
+                          fill="#fff" />
+                      </g>
                     </g>
-                  </g>
-                  <g
-                    id="Group_56"
-                    data-name="Group 56"
-                    transform="translate(0 5.834)">
-                    <g id="Group_55" data-name="Group 55">
-                      <path
-                        id="Path_386"
-                        data-name="Path 386"
-                        d="M0,149.344v3.334a8.342,8.342,0,0,1,8.334,8.333h3.332A11.68,11.68,0,0,0,0,149.344Z"
-                        transform="translate(0 -149.344)"
-                        fill="#fff" />
+                    <g
+                      id="Group_56"
+                      data-name="Group 56"
+                      transform="translate(0 5.834)">
+                      <g id="Group_55" data-name="Group 55">
+                        <path
+                          id="Path_386"
+                          data-name="Path 386"
+                          d="M0,149.344v3.334a8.342,8.342,0,0,1,8.334,8.333h3.332A11.68,11.68,0,0,0,0,149.344Z"
+                          transform="translate(0 -149.344)"
+                          fill="#fff" />
+                      </g>
                     </g>
-                  </g>
-                  <g id="Group_58" data-name="Group 58">
-                    <g id="Group_57" data-name="Group 57">
-                      <path
-                        id="Path_387"
-                        data-name="Path 387"
-                        d="M0,0V3.334A14.182,14.182,0,0,1,14.167,17.5H17.5A17.519,17.519,0,0,0,0,0Z"
-                        fill="#fff" />
+                    <g id="Group_58" data-name="Group 58">
+                      <g id="Group_57" data-name="Group 57">
+                        <path
+                          id="Path_387"
+                          data-name="Path 387"
+                          d="M0,0V3.334A14.182,14.182,0,0,1,14.167,17.5H17.5A17.519,17.519,0,0,0,0,0Z"
+                          fill="#fff" />
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </span>
-            </button>
+                  </svg>
+                </span>
+              </button>
+            </a>
           </div>
         </div>
-        <img src="/img/woman-illustration-one.svg" alt="" />
+        <img class="first-image" src="/img/woman-illustration-one.svg" alt="" />
       </div>
     </div>
   </div>
@@ -334,13 +341,12 @@
       <div class="section-wrapper">
         <img src="/img/woman-illustration-two.svg" alt="" />
         <div>
-          <h1 class="app-decor">Lorem Ipsum Dolor Sit Amet</h1>
+          <h1 class="app-decor">We're Ready for You!</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-            nihil provident voluptatum? At quisquam, sequi repellendus officia
-            voluptatibus libero recusandae, quia perferendis tenetur cupiditate
-            assumenda modi in, dolorum provident laudantium! Mollitia quas rem
-            inventore.
+            This is a virtual tambayan where we can all connect with each other,
+            exchange ideas, talk about ANYTHING, ask questions, or just hang
+            out. We are creating safe space for us to discuss being the boss of
+            our own lives.
           </p>
         </div>
       </div>
@@ -354,21 +360,34 @@
     <div class="app-division-wrapper">
       <div class="section-wrapper home-latest-episode-wrapper">
         <div class="center-section-wrapper">
-          <h1 class="app-decor">Lorem Ipsum Dolor sit Amet, consectetur</h1>
+          <h1 class="app-decor">Listen to Our Podcast</h1>
           <p class="my-10">Our Latest Episode</p>
           <div class="player-wrapper">
-            <div class="player">1</div>
+            <div class="player">
+              <iframe
+                src="https://anchor.fm/pinaygirlboss/embed/episodes/PGB-Ep--3-Too-Young-to-be-a-Boss--No-way--Plus-Insights-on-the-Crystals-Business-ei9dvi/a-a2vii3a"
+                frameborder="0"
+                scrolling="no" />
+            </div>
           </div>
           <p class="my-20">More Episodes</p>
           <div class="featured-episodes-wrapper">
-            <a href="">
-              <img src="/img/podcast-item-img.png" alt="" />
+            <a
+              href="episodes/pgb-ep-3-too-young-to-be-a-boss-no-way-plus-insights-on-the-crystals-business">
+              <img
+                src="http://pinaygirlboss.com/wp-api/wp-content/uploads/2020/08/8236594-1597690550284-bbfb218972d86.jpg"
+                alt="" />
             </a>
-            <a href="">
-              <img src="/img/podcast-item-img.png" alt="" />
+            <a
+              href="episodes/pgb-ep-2-no-such-thing-as-the-business-in-your-head-create-your-own-niche">
+              <img
+                src="http://pinaygirlboss.com/wp-api/wp-content/uploads/2020/08/8236594-1597692584774-832687e2bea0c.jpg"
+                alt="" />
             </a>
-            <a href="">
-              <img src="/img/podcast-item-img.png" alt="" />
+            <a href="episodes/pinay-girl-boss-pilot-episode">
+              <img
+                src="http://pinaygirlboss.com/wp-api/wp-content/uploads/2020/08/8236594-1597687157972-d6d534344340b.jpg"
+                alt="" />
             </a>
           </div>
         </div>
@@ -387,50 +406,49 @@
           <div class="about-us-founders">
             <div>
               <img src="/img/founder-two.png" alt="" />
-              <h3>Name Here</h3>
+              <h3>Tina</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                ab nam commodi officiis eius maiores illum est repudiandae
-                accusantium. Quisquam blanditiis provident, distinctio error
-                corrupti nemo! Soluta similique voluptatibus sint vel at! Fugit,
-                asperiores!
+                I’m a 30-something mom of 2, a lawyer, an entrepreneur,
+                community builder, essential oils, travel, and coffee lover, and
+                wannabe fitmom, dancer, and videoke queen.
               </p>
               <div class="social-media">
                 <div>
-                  <a href="">
+                  <a
+                    href=" https://www.facebook.com/theoilnaturalproject"
+                    target="_blank">
                     <img src="/img/facebook.svg" alt="" />
                   </a>
                 </div>
                 <div>
-                  <a href="">
+                  <a href="https://www.instagram.com/tina.dg_/" target="_blank">
                     <img src="/img/instagram.svg" alt="" />
                   </a>
                 </div>
-                <div>
-                  <a href="">
-                    <img src="/img/linkedin.svg" alt="" />
-                  </a>
-                </div>
+                <a href="">
+                  <img src="/img/linkedin.svg" alt="" />
+                </a>
               </div>
             </div>
             <div>
               <img src="/img/founder-one.png" alt="" />
-              <h3>Name Here</h3>
+              <h3>Max</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                ab nam commodi officiis eius maiores illum est repudiandae
-                accusantium. Quisquam blanditiis provident, distinctio error
-                corrupti nemo! Soluta similique voluptatibus sint vel at! Fugit,
-                asperiores!
+                30 year old mom (& wife), Travel Junkie, Potterhead, Dessert
+                Fiend, Essential Oil Fairy (haha!)
               </p>
               <div class="social-media">
                 <div>
-                  <a href="">
+                  <a
+                    href=" https://www.facebook.com/CertifiedOilers"
+                    target="_blank">
                     <img src="/img/facebook.svg" alt="" />
                   </a>
                 </div>
                 <div>
-                  <a href="">
+                  <a
+                    href="https://www.instagram.com/maxidoodle/"
+                    target="_blank">
                     <img src="/img/instagram.svg" alt="" />
                   </a>
                 </div>

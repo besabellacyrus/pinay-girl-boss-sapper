@@ -8,12 +8,12 @@
     return {
       cache: await client.query({
         query: EPISODE,
-        variables: { slug }
+        variables: { slug },
       }),
       episodes: await client.query({
-        query: EPISODES
+        query: EPISODES,
       }),
-      slug
+      slug,
     };
   }
 </script>
@@ -40,7 +40,7 @@
     console.log("beforeUpdate");
     const eps = episodes.data.episodes.nodes;
     const cat = cache.data.episode;
-    const ddd = e => e.slug === slug;
+    const ddd = (e) => e.slug === slug;
     const i = eps.findIndex(ddd);
     next = eps[i - 1] || null;
     prev = eps[i + 1] || null;
@@ -56,7 +56,7 @@
 
   const episode = query(client, {
     query: EPISODE,
-    variables: { slug }
+    variables: { slug },
   });
 
   const goNext = async () => {
@@ -98,6 +98,9 @@
     height: 15rem;
     overflow: hidden;
     max-width: 90rem;
+    iframe {
+      width: 100%;
+    }
   }
   .podcast-info {
     width: 100%;

@@ -24,9 +24,8 @@
       <div class="center-section-wrapper">
         <h1 class="app-decor">Who We Are</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
-          nostrum! Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum
-          odit excepturi voluptas ad!
+          Know the team behind Pinay Girl Boss and the reason behind the
+          Project, why they started it and why they share it to the world.
         </p>
       </div>
     </div>
@@ -51,34 +50,4 @@
     </div>
   </div>
 
-  <section>
-    <div class="content-wrapper">
-      <img src="img/founder-one.png" alt="" />
-      <div>
-        <h3>Maria Clara</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eveniet
-          velit exercitationem! Libero perferendis modi corrupti voluptatibus
-          vero, odit laudantium aut, ipsam aperiam voluptates dolorum,
-          temporibus similique quidem vitae numquam dicta nulla? Quibusdam
-          asperiores dicta repellendus error ad laudantium. Praesentium?
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="content-wrapper reverse-wrapper">
-      <div>
-        <h3>Juanita Clara</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-          praesentium neque veniam nostrum quos sit temporibus possimus, earum
-          nulla harum, hic nam! Dicta, ducimus, magni architecto dignissimos ut
-          doloremque modi fugit expedita accusantium iste hic eligendi explicabo
-          autem deleniti natus.
-        </p>
-      </div>
-      <img src="img/founder-two.png" alt="" />
-    </div>
-  </section>
 </TransitionWrapper>

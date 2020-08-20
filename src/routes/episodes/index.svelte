@@ -6,17 +6,17 @@
     after: null,
     first: 3,
     before: null,
-    last: null
+    last: null,
   };
   export async function preload() {
     return {
       cache: await client.query({
-        query: EPISODES
+        query: EPISODES,
       }),
       paginated: await client.query({
         query: PAGINATED_EPISODES,
-        variables: initial
-      })
+        variables: initial,
+      }),
     };
   }
 </script>
@@ -33,7 +33,7 @@
   restore(client, EPISODES, cache.data);
 
   const episodes = query(client, {
-    query: EPISODES
+    query: EPISODES,
   });
   const cc = paginated.data.episodes.edges[0];
 
@@ -81,7 +81,7 @@
 </style>
 
 <svelte:head>
-  <title>Episodes</title>
+  <title>Our Episodes</title>
 </svelte:head>
 
 <TransitionWrapper>
@@ -90,7 +90,7 @@
     episode-main-bg">
     <div class="section-wrapper">
       <div class="center-section-wrapper">
-        <h1 class="app-decor">Episodes</h1>
+        <h1 class="app-decor">Our Episodes</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
           nostrum! Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum

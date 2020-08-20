@@ -67,10 +67,18 @@
               <img src="/img/footer/rss.svg" alt="" />
             </div>
             <div>
-              <img src="/img/footer/Spotify.svg" alt="" />
+              <a
+                href="https://open.spotify.com/show/2OjVLvvJyQrzEWnKTgkGED?si=RxZeLXFwQwWXTR-4y9_8gw"
+                target="_blank">
+                <img src="/img/footer/Spotify.svg" alt="" />
+              </a>
             </div>
             <div>
-              <img src="/img/footer/iTunes.svg" alt="" />
+              <a
+                href="https://podcasts.apple.com/ph/podcast/pinay-girl-boss/id1528063283"
+                target="_blank">
+                <img src="/img/footer/iTunes.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
