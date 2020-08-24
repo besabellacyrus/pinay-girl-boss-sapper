@@ -1,5 +1,27 @@
+<script context="module">
+  import client from "../lib/apollo";
+  import { LATEST_EPISODES } from "../queries/latestEpisodes";
+
+  export async function preload() {
+    return {
+      cache: await client.query({
+        query: LATEST_EPISODES,
+      }),
+    };
+  }
+</script>
+
 <script>
   import TransitionWrapper from "../components/TransitionWrapper.svelte";
+  import { restore, query } from "svelte-apollo";
+
+  export let cache;
+
+  restore(client, LATEST_EPISODES, cache.data);
+
+  const latestEpisodes = query(client, {
+    query: LATEST_EPISODES,
+  });
 </script>
 
 <style lang="scss">
@@ -256,6 +278,27 @@
 
 <svelte:head>
   <title>Home</title>
+  <script>
+    (function (w, d, t, s, n) {
+      w.FlodeskObject = n;
+      var fn = function () {
+        (w[n].q = w[n].q || []).push(arguments);
+      };
+      w[n] = w[n] || fn;
+      var f = d.getElementsByTagName(t)[0];
+      var e = d.createElement(t);
+      var h = "?v=" + new Date().getTime();
+      e.async = true;
+      e.src = s + h;
+      f.parentNode.insertBefore(e, f);
+    })(
+      window,
+      document,
+      "script",
+      "https://assets.flodesk.com/universal.js",
+      "fd"
+    );
+  </script>
 </svelte:head>
 <TransitionWrapper>
   <div class="main-wrap">
@@ -359,38 +402,31 @@
     </figure>
     <div class="app-division-wrapper">
       <div class="section-wrapper home-latest-episode-wrapper">
-        <div class="center-section-wrapper">
-          <h1 class="app-decor">Listen to Our Podcast</h1>
-          <p class="my-10">Our Latest Episode</p>
-          <div class="player-wrapper">
-            <div class="player">
-              <iframe
-                src="https://anchor.fm/pinaygirlboss/embed/episodes/PGB-Ep--3-Too-Young-to-be-a-Boss--No-way--Plus-Insights-on-the-Crystals-Business-ei9dvi/a-a2vii3a"
-                frameborder="0"
-                scrolling="no" />
+        {#await $latestEpisodes}
+          <p>Loading</p>
+        {:then data}
+          <div class="center-section-wrapper">
+            <h1 class="app-decor">Listen to Our Podcast</h1>
+            <p class="my-10">Our Latest Episode</p>
+            <div class="player-wrapper">
+              <div class="player">
+                {@html data.data.episodes.nodes[0].episodes_gql.embed}
+              </div>
+            </div>
+            <p class="my-20">More Episodes</p>
+            <div class="featured-episodes-wrapper">
+              {#if data.data}
+                {#each data.data.episodes.nodes as latest, i}
+                  <a href={latest.link}>
+                    <img
+                      src={latest.episodes_gql.episodeThumbnail.sourceUrl}
+                      alt={latest.title} />
+                  </a>
+                {/each}
+              {/if}
             </div>
           </div>
-          <p class="my-20">More Episodes</p>
-          <div class="featured-episodes-wrapper">
-            <a
-              href="episodes/pgb-ep-3-too-young-to-be-a-boss-no-way-plus-insights-on-the-crystals-business">
-              <img
-                src="http://pinaygirlboss.com/wp-api/wp-content/uploads/2020/08/8236594-1597690550284-bbfb218972d86.jpg"
-                alt="" />
-            </a>
-            <a
-              href="episodes/pgb-ep-2-no-such-thing-as-the-business-in-your-head-create-your-own-niche">
-              <img
-                src="http://pinaygirlboss.com/wp-api/wp-content/uploads/2020/08/8236594-1597692584774-832687e2bea0c.jpg"
-                alt="" />
-            </a>
-            <a href="episodes/pinay-girl-boss-pilot-episode">
-              <img
-                src="http://pinaygirlboss.com/wp-api/wp-content/uploads/2020/08/8236594-1597687157972-d6d534344340b.jpg"
-                alt="" />
-            </a>
-          </div>
-        </div>
+        {/await}
       </div>
     </div>
   </div>
@@ -472,17 +508,13 @@
     <div class="app-division-wrapper fifth-section-wrapper">
       <div class="section-wrapper">
         <div class="center-section-wrapper home-contact-us">
-          <h1 class="app-decor">Contact Us</h1>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
-            est dolor harum recusandae! Nemo unde sed eum quaerat quisquam quo,
-            aspernatur voluptas amet!
-          </p>
-          <form action="">
-            <label for="">Email</label>
-            <input type="text" />
-            <button>Lorem Ipsum</button>
-          </form>
+          <div id="fd-form-5f3459b06267530026690ee8" />
+          <script>
+            window.fd("form", {
+              formId: "5f3459b06267530026690ee8",
+              containerEl: "#fd-form-5f3459b06267530026690ee8",
+            });
+          </script>
         </div>
       </div>
     </div>

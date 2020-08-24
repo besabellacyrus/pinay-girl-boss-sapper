@@ -82,7 +82,9 @@
 
 <nav>
   <div class="logo-wrapper">
-    <img src="/pgn_logo.svg" alt="" />
+    <a href="/">
+      <img src="/pgn_logo.svg" alt="" />
+    </a>
   </div>
   <div class="menu-desktop menu-wrapper">
     <ul>
