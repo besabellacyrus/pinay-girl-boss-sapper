@@ -89,19 +89,19 @@
   <div class="menu-desktop menu-wrapper">
     <ul>
       <li aria-current={segment === undefined ? 'page' : undefined}>
-        <a rel="prefetch" href="/">Home</a>
+        <a href="/">Home</a>
       </li>
       <li aria-current={segment === 'episodes' ? 'page' : undefined}>
-        <a rel="prefetch" href="episodes">Episodes</a>
+        <a href="episodes">Episodes</a>
       </li>
       <li aria-current={segment === 'about' ? 'page' : undefined}>
-        <a rel="prefetch" href="about">About</a>
+        <a href="about">About</a>
       </li>
       <li aria-current={segment === 'resources' ? 'page' : undefined}>
-        <a rel="prefetch" href="resources">Resources</a>
+        <a href="resources">Resources</a>
       </li>
       <li aria-current={segment === 'contact' ? 'page' : undefined}>
-        <a rel="prefetch" href="contact">Contact</a>
+        <a href="contact">Contact</a>
       </li>
     </ul>
     <a href="episodes">

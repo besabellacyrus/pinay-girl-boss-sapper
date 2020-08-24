@@ -28,7 +28,7 @@
             123 Unit, Street Name, Municipality Name, City Name, Philippines
             Area Code
           </p>
-          <span>sample@gmail.com</span>
+          <span>pinaygirlboss@gmail.com</span>
         </div>
       </div>
       <div class="footer-links">
