@@ -417,7 +417,7 @@
             <div class="featured-episodes-wrapper">
               {#if data.data}
                 {#each data.data.episodes.nodes as latest, i}
-                  <a href={latest.link}>
+                  <a href={'episodes/' + latest.slug}>
                     <img
                       src={latest.episodes_gql.episodeThumbnail.sourceUrl}
                       alt={latest.title} />

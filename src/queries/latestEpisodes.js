@@ -10,7 +10,7 @@ export const LATEST_EPISODES = gql`
         embed
       }
       title
-      link
+      slug
     }
   }
 }
