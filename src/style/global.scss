@@ -27,9 +27,7 @@ $red-light: #fcb2b2;
   font-size: 62.5%;
   body {
     margin: 0;
-    // color: $gray;
     color: #969696;
-    // Body font size 16px
     font-size: 1.6rem;
     font-family: "RobotoRegular";
     background-color: #f9f8f3;
@@ -148,9 +146,6 @@ h4 {
 
 .home-episode-wrapper {
   padding: 4rem 5rem;
-}
-.home-about-wrapper {
-  // margin-top: 6rem;
 }
 .app-center-wrapper {
   position: relative;
@@ -659,16 +654,6 @@ section {
   }
 }
 
-// .section-wrapper {
-//   max-width: 1300px;
-//   margin: 0 auto;
-//   // display: flex;
-//   flex-direction: initial;
-//   @media screen and (max-width: 768px){
-//     padding: 0 3rem;
-//   }
-// }
-
 .app-decor {
   &:before {
     content: "";
@@ -688,7 +673,6 @@ h1 {
   font-family: "RobotoMedium";
   line-height: 1.2em;
   position: relative;
-  // z-index: -1;
   @media screen and (max-width: 1024px) {
     margin-bottom: 2rem;
   }
@@ -732,7 +716,7 @@ nav {
     display: flex;
     .active {
       border-radius: 17px;
-      border: 1px solid #2a587b;
+      border: 1px solid #25577d;
     }
     li {
       padding: 0.3rem 2rem;
