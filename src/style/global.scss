@@ -730,13 +730,9 @@ nav {
   }
   ul {
     display: flex;
-
     .active {
       border-radius: 17px;
       border: 1px solid #2a587b;
-    }
-    &:hover {
-      color: #aaaaaa;
     }
     li {
       padding: 0.3rem 2rem;
@@ -749,9 +745,7 @@ nav {
       transition: color 300ms ease-in;
 
       &:hover {
-        border-radius: 17px;
-        border: 1px solid #2a587b;
-        color: $gray;
+        color: #25577d;
       }
       @media screen and (max-width: 900px) {
         padding: 0.3rem 1rem;
