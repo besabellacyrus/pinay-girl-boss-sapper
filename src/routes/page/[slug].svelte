@@ -28,22 +28,26 @@
   });
 </script>
 
-<style>
-
+<style lang="scss">
+  .special-page-container {
+    margin-top: 18rem;
+    width: 1366px;
+    min-height: 800px;
+  }
 </style>
 
 <svelte:head>
   <title>Slug</title>
 </svelte:head>
 
-{#await $page}
+{#await cache}
   <p>Loading...</p>
 {:then data}
   {#if data.data}
-    <div class="app-division-wrapper default-section-header about-us-main-bg">
+    <div class="app-division-wrapper">
       <div class="section-wrapper">
-        <div class="center-section-wrapper error-wrapper">
-          <h1>{data.data.page.title}</h1>
+        <div class="special-page-container">
+          <h1 class="app-decor">{data.data.page.title}</h1>
           {@html data.data.page.content}
         </div>
       </div>
