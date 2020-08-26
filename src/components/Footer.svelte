@@ -32,8 +32,12 @@
         </div>
       </div>
       <div class="footer-links">
-        <h3>Privacy Policy</h3>
-        <h3>Terms of Service</h3>
+        <a href="/page/privacy-policy">
+          <h3>Privacy Policy</h3>
+        </a>
+        <a href="/page/terms-of-service">
+          <h3>Terms of Service</h3>
+        </a>
       </div>
       <div class="footer-copy-rights">
         &copy; 2020 The Pinay Girl Boss. All rights reserved.
@@ -45,16 +49,26 @@
           <h3>Let's Get Social!</h3>
           <div class="social-media">
             <div>
-              <img src="/img/footer/facebook.svg" alt="" />
+              <a href="https://www.facebook.com/pinaygirlboss" target="_blank">
+                <img src="/img/footer/facebook.svg" alt="" />
+              </a>
             </div>
             <div>
-              <img src="/img/footer/instagram.svg" alt="" />
+              <a
+                href="https://www.instagram.com/pinaygirlboss/"
+                target="_blank">
+                <img src="/img/footer/instagram.svg" alt="" />
+              </a>
             </div>
             <div>
-              <img src="/img/footer/messenger.svg" alt="" />
+              <a href="http://m.me/pinaygirlboss" target="_blank">
+                <img src="/img/footer/messenger.svg" alt="" />
+              </a>
             </div>
             <div>
-              <img src="/img/footer/Twitter.svg" alt="" />
+              <a href="" target="_blank">
+                <img src="/img/footer/Twitter.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
@@ -64,7 +78,9 @@
           <h3>Subscribe To The Podcast</h3>
           <div class="social-media">
             <div>
-              <img src="/img/footer/rss.svg" alt="" />
+              <a href="" target="_blank">
+                <img src="/img/footer/rss.svg" alt="" />
+              </a>
             </div>
             <div>
               <a

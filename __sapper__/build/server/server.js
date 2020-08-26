@@ -788,7 +788,7 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
 const css$5 = {
 	code: ".footer-wrapper-main.svelte-sedm0k{display:grid;grid-template-columns:1fr 1fr}@media screen and (max-width: 768px){.footer-wrapper-main.svelte-sedm0k{display:flex;grid-template-columns:1fr 1fr;max-width:1400px;flex-direction:column-reverse}}",
-	map: "{\"version\":3,\"file\":\"Footer.svelte\",\"sources\":[\"Footer.svelte\"],\"sourcesContent\":[\"<script>\\n\\n</script>\\n\\n<style lang=\\\"scss\\\">.footer-wrapper-main {\\n  display: grid;\\n  grid-template-columns: 1fr 1fr; }\\n  @media screen and (max-width: 768px) {\\n    .footer-wrapper-main {\\n      display: flex;\\n      grid-template-columns: 1fr 1fr;\\n      max-width: 1400px;\\n      flex-direction: column-reverse; } }</style>\\n\\n<footer>\\n  <div class=\\\"footer-wrapper-main\\\">\\n    <div class=\\\"left-footer\\\">\\n      <div class=\\\"left-footer-content\\\">\\n        <div>\\n          <img src=\\\"/img/girl-boss-logo.svg\\\" alt=\\\"\\\" />\\n        </div>\\n        <div>\\n          <h3>Contact Us</h3>\\n          <p>\\n            123 Unit, Street Name, Municipality Name, City Name, Philippines\\n            Area Code\\n          </p>\\n          <span>pinaygirlboss@gmail.com</span>\\n        </div>\\n      </div>\\n      <div class=\\\"footer-links\\\">\\n        <h3>Privacy Policy</h3>\\n        <h3>Terms of Service</h3>\\n      </div>\\n      <div class=\\\"footer-copy-rights\\\">\\n        &copy; 2020 The Pinay Girl Boss. All rights reserved.\\n      </div>\\n    </div>\\n    <div class=\\\"right-footer\\\">\\n      <div>\\n        <div>\\n          <h3>Let's Get Social!</h3>\\n          <div class=\\\"social-media\\\">\\n            <div>\\n              <img src=\\\"/img/footer/facebook.svg\\\" alt=\\\"\\\" />\\n            </div>\\n            <div>\\n              <img src=\\\"/img/footer/instagram.svg\\\" alt=\\\"\\\" />\\n            </div>\\n            <div>\\n              <img src=\\\"/img/footer/messenger.svg\\\" alt=\\\"\\\" />\\n            </div>\\n            <div>\\n              <img src=\\\"/img/footer/Twitter.svg\\\" alt=\\\"\\\" />\\n            </div>\\n          </div>\\n        </div>\\n      </div>\\n      <div>\\n        <div>\\n          <h3>Subscribe To The Podcast</h3>\\n          <div class=\\\"social-media\\\">\\n            <div>\\n              <img src=\\\"/img/footer/rss.svg\\\" alt=\\\"\\\" />\\n            </div>\\n            <div>\\n              <a\\n                href=\\\"https://open.spotify.com/show/2OjVLvvJyQrzEWnKTgkGED?si=RxZeLXFwQwWXTR-4y9_8gw\\\"\\n                target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/Spotify.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n            <div>\\n              <a\\n                href=\\\"https://podcasts.apple.com/ph/podcast/pinay-girl-boss/id1528063283\\\"\\n                target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/iTunes.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\\n  </div>\\n</footer>\\n\"],\"names\":[],\"mappings\":\"AAImB,oBAAoB,cAAC,CAAC,AACvC,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,GAAG,CAAC,GAAG,AAAE,CAAC,AACjC,OAAO,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACpC,oBAAoB,cAAC,CAAC,AACpB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,GAAG,CAAC,GAAG,CAC9B,SAAS,CAAE,MAAM,CACjB,cAAc,CAAE,cAAc,AAAE,CAAC,AAAC,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Footer.svelte\",\"sources\":[\"Footer.svelte\"],\"sourcesContent\":[\"<script>\\n\\n</script>\\n\\n<style lang=\\\"scss\\\">.footer-wrapper-main {\\n  display: grid;\\n  grid-template-columns: 1fr 1fr; }\\n  @media screen and (max-width: 768px) {\\n    .footer-wrapper-main {\\n      display: flex;\\n      grid-template-columns: 1fr 1fr;\\n      max-width: 1400px;\\n      flex-direction: column-reverse; } }</style>\\n\\n<footer>\\n  <div class=\\\"footer-wrapper-main\\\">\\n    <div class=\\\"left-footer\\\">\\n      <div class=\\\"left-footer-content\\\">\\n        <div>\\n          <img src=\\\"/img/girl-boss-logo.svg\\\" alt=\\\"\\\" />\\n        </div>\\n        <div>\\n          <h3>Contact Us</h3>\\n          <p>\\n            123 Unit, Street Name, Municipality Name, City Name, Philippines\\n            Area Code\\n          </p>\\n          <span>pinaygirlboss@gmail.com</span>\\n        </div>\\n      </div>\\n      <div class=\\\"footer-links\\\">\\n        <a href=\\\"/page/privacy-policy\\\">\\n          <h3>Privacy Policy</h3>\\n        </a>\\n        <a href=\\\"/page/terms-of-service\\\">\\n          <h3>Terms of Service</h3>\\n        </a>\\n      </div>\\n      <div class=\\\"footer-copy-rights\\\">\\n        &copy; 2020 The Pinay Girl Boss. All rights reserved.\\n      </div>\\n    </div>\\n    <div class=\\\"right-footer\\\">\\n      <div>\\n        <div>\\n          <h3>Let's Get Social!</h3>\\n          <div class=\\\"social-media\\\">\\n            <div>\\n              <a href=\\\"https://www.facebook.com/pinaygirlboss\\\" target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/facebook.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n            <div>\\n              <a\\n                href=\\\"https://www.instagram.com/pinaygirlboss/\\\"\\n                target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/instagram.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n            <div>\\n              <a href=\\\"http://m.me/pinaygirlboss\\\" target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/messenger.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n            <div>\\n              <a href=\\\"\\\" target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/Twitter.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n          </div>\\n        </div>\\n      </div>\\n      <div>\\n        <div>\\n          <h3>Subscribe To The Podcast</h3>\\n          <div class=\\\"social-media\\\">\\n            <div>\\n              <a href=\\\"\\\" target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/rss.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n            <div>\\n              <a\\n                href=\\\"https://open.spotify.com/show/2OjVLvvJyQrzEWnKTgkGED?si=RxZeLXFwQwWXTR-4y9_8gw\\\"\\n                target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/Spotify.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n            <div>\\n              <a\\n                href=\\\"https://podcasts.apple.com/ph/podcast/pinay-girl-boss/id1528063283\\\"\\n                target=\\\"_blank\\\">\\n                <img src=\\\"/img/footer/iTunes.svg\\\" alt=\\\"\\\" />\\n              </a>\\n            </div>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\\n  </div>\\n</footer>\\n\"],\"names\":[],\"mappings\":\"AAImB,oBAAoB,cAAC,CAAC,AACvC,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,GAAG,CAAC,GAAG,AAAE,CAAC,AACjC,OAAO,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACpC,oBAAoB,cAAC,CAAC,AACpB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,GAAG,CAAC,GAAG,CAC9B,SAAS,CAAE,MAAM,CACjB,cAAc,CAAE,cAAc,AAAE,CAAC,AAAC,CAAC\"}"
 };
 
 const Footer = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
@@ -800,17 +800,17 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
             Area Code
           </p>
           <span>pinaygirlboss@gmail.com</span></div></div>
-      <div class="${"footer-links"}"><h3>Privacy Policy</h3>
-        <h3>Terms of Service</h3></div>
+      <div class="${"footer-links"}"><a href="${"/page/privacy-policy"}"><h3>Privacy Policy</h3></a>
+        <a href="${"/page/terms-of-service"}"><h3>Terms of Service</h3></a></div>
       <div class="${"footer-copy-rights"}">© 2020 The Pinay Girl Boss. All rights reserved.
       </div></div>
     <div class="${"right-footer"}"><div><div><h3>Let&#39;s Get Social!</h3>
-          <div class="${"social-media"}"><div><img src="${"/img/footer/facebook.svg"}" alt="${""}"></div>
-            <div><img src="${"/img/footer/instagram.svg"}" alt="${""}"></div>
-            <div><img src="${"/img/footer/messenger.svg"}" alt="${""}"></div>
-            <div><img src="${"/img/footer/Twitter.svg"}" alt="${""}"></div></div></div></div>
+          <div class="${"social-media"}"><div><a href="${"https://www.facebook.com/pinaygirlboss"}" target="${"_blank"}"><img src="${"/img/footer/facebook.svg"}" alt="${""}"></a></div>
+            <div><a href="${"https://www.instagram.com/pinaygirlboss/"}" target="${"_blank"}"><img src="${"/img/footer/instagram.svg"}" alt="${""}"></a></div>
+            <div><a href="${"http://m.me/pinaygirlboss"}" target="${"_blank"}"><img src="${"/img/footer/messenger.svg"}" alt="${""}"></a></div>
+            <div><a href="${""}" target="${"_blank"}"><img src="${"/img/footer/Twitter.svg"}" alt="${""}"></a></div></div></div></div>
       <div><div><h3>Subscribe To The Podcast</h3>
-          <div class="${"social-media"}"><div><img src="${"/img/footer/rss.svg"}" alt="${""}"></div>
+          <div class="${"social-media"}"><div><a href="${""}" target="${"_blank"}"><img src="${"/img/footer/rss.svg"}" alt="${""}"></a></div>
             <div><a href="${"https://open.spotify.com/show/2OjVLvvJyQrzEWnKTgkGED?si=RxZeLXFwQwWXTR-4y9_8gw"}" target="${"_blank"}"><img src="${"/img/footer/Spotify.svg"}" alt="${""}"></a></div>
             <div><a href="${"https://podcasts.apple.com/ph/podcast/pinay-girl-boss/id1528063283"}" target="${"_blank"}"><img src="${"/img/footer/iTunes.svg"}" alt="${""}"></a></div></div></div></div></div></div></footer>`;
 });
@@ -1199,22 +1199,55 @@ const U5Bslugu5D$1 = create_ssr_component(($$result, $$props, $$bindings, $$slot
 <div class="${"content svelte-1tzifke"}">${post.html}</div>`;
 });
 
+const PAGE = ApolloClient.gql`
+  query MyQuery($slug: ID!) {
+    page(id: $slug, idType: URI) {
+      slug
+      status
+      title
+      content
+    }
+  }
+`;
+
 /* src\routes\page\[slug].svelte generated by Svelte v3.24.0 */
 
 async function preload$6({ params, query }) {
 	let slug = params.slug;
-	return { slug };
+
+	return {
+		cache: await client.query({ query: PAGE, variables: { slug } }),
+		slug
+	};
 }
 
 const U5Bslugu5D$2 = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
+	let $page;
+	let { cache } = $$props;
 	let { slug } = $$props;
+	svelteApollo.restore(client, PAGE, cache.data);
+	const page = svelteApollo.query(client, { query: PAGE, variables: { slug } });
+	$page = get_store_value(page);
+	if ($$props.cache === void 0 && $$bindings.cache && cache !== void 0) $$bindings.cache(cache);
 	if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0) $$bindings.slug(slug);
+	$page = get_store_value(page);
 
 	return `${($$result.head += `${($$result.title = `<title>Slug</title>`, "")}`, "")}
 
-<div class="${"app-division-wrapper default-section-header font-white about-us-main-bg"}"><div class="${"section-wrapper"}"><div class="${"center-section-wrapper error-wrapper"}"><h1>${escape(slug)}</h1>
+${(function (__value) {
+		if (is_promise(__value)) return `
+  <p>Loading...</p>
+`;
 
-      <p>page</p></div></div></div>`;
+		return (function (data) {
+			return `
+  ${data.data
+			? `<div class="${"app-division-wrapper default-section-header about-us-main-bg"}"><div class="${"section-wrapper"}"><div class="${"center-section-wrapper error-wrapper"}"><h1>${escape(data.data.page.title)}</h1>
+          ${data.data.page.content}</div></div></div>`
+			: ``}
+`;
+		})(__value);
+	})($page)}`;
 });
 
 // This file is generated by Sapper — do not edit it!
