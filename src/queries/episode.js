@@ -10,6 +10,7 @@ export const EPISODE = gql`
         duration
         embed
         resources
+        sponsors
         episodeThumbnail {
           sourceUrl
         }

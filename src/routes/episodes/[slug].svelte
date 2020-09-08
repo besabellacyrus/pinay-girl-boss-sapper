@@ -305,6 +305,14 @@
           {/if}
         </div>
       {/if}
+      {#if data.data.episode.episodes_gql.sponsors}
+        <div class="common-wrapper about-resources">
+          <h3>This episode is brought to you by:</h3>
+          <div>
+            {@html data.data.episode.episodes_gql.sponsors}
+          </div>
+        </div>
+      {/if}
       {#if data.data.episode.episodes_gql.resources}
         <div class="common-wrapper about-resources">
           <h3>Resources</h3>
