@@ -87,14 +87,17 @@
 <TransitionWrapper>
   <div
     class="app-division-wrapper font-white default-section-header
-    episode-main-bg">
+      episode-main-bg">
     <div class="section-wrapper">
       <div class="center-section-wrapper">
         <h1 class="app-decor">Our Episodes</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
-          nostrum! Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum
-          odit excepturi voluptas ad!
+          Join the Online Kwentuhan! We talk about anything and everything under
+          the sun - business, productivity, self-love, self-care, makeup,
+          workouts (or the lack of it), coffee, our love for essential oils,
+          daily struggles, life phases and transitions - no holds barred. Let’s
+          get inspired and learn from stories of our guests and let us know how
+          these stories resonate with you!
         </p>
       </div>
     </div>

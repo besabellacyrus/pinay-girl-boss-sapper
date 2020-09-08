@@ -23,15 +23,12 @@
         <div>
           <h3>Contact Us</h3>
           <span>pinaygirlboss@gmail.com</span>
+          <br />
+          <br />
+          <a href="/page/privacy-policy">
+            <h3>Privacy Policy</h3>
+          </a>
         </div>
-      </div>
-      <div class="footer-links">
-        <a href="/page/privacy-policy">
-          <h3>Privacy Policy</h3>
-        </a>
-        <a href="/page/terms-of-service">
-          <h3>Terms of Service</h3>
-        </a>
       </div>
       <div class="footer-copy-rights">
         &copy; 2020 The Pinay Girl Boss. All rights reserved.

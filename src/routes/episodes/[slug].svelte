@@ -234,7 +234,7 @@
 </style>
 
 <svelte:head>
-  <title>Single Podcast</title>
+  <title>{cache.data.episode.title}</title>
 </svelte:head>
 
 <TransitionWrapper>
@@ -275,9 +275,7 @@
                 {@html data.data.episode.episodes_gql.speaker.authors_gql.bio}
               </div>
             </div>
-            <div>
-              <img src="img/founder-two.png" alt="" />
-            </div>
+            <div><img src="img/founder-two.png" alt="" /></div>
           </div>
         </div>
         <div class="common-wrapper social-media">
