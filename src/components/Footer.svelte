@@ -59,11 +59,6 @@
                 <img src="/img/footer/messenger.svg" alt="" />
               </a>
             </div>
-            <div>
-              <a href="" target="_blank">
-                <img src="/img/footer/Twitter.svg" alt="" />
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -23,6 +23,12 @@ $red-light: #fcb2b2;
   font-display: swap;
 }
 
+@font-face {
+  font-family: Betty;
+  src: url("/fonts/THINKING_OF_BETTY.ttf");
+  font-display: swap;
+}
+
 :root {
   font-size: 62.5%;
   body {
@@ -405,7 +411,6 @@ h4 {
   .section-wrapper {
     min-height: 76vh;
     align-items: initial;
-    // padding-top: 12rem;
     padding-top: 7rem;
     p {
       max-width: 54rem;
