@@ -1,11 +1,11 @@
 <script>
-
 </script>
 
 <style lang="scss">
   .footer-wrapper-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
     @media screen and (max-width: 768px) {
       display: flex;
       grid-template-columns: 1fr 1fr;
@@ -19,15 +19,9 @@
   <div class="footer-wrapper-main">
     <div class="left-footer">
       <div class="left-footer-content">
-        <div>
-          <img src="/img/girl-boss-logo.svg" alt="" />
-        </div>
+        <div><img src="/img/girl-boss-logo.svg" alt="" /></div>
         <div>
           <h3>Contact Us</h3>
-          <p>
-            123 Unit, Street Name, Municipality Name, City Name, Philippines
-            Area Code
-          </p>
           <span>pinaygirlboss@gmail.com</span>
         </div>
       </div>

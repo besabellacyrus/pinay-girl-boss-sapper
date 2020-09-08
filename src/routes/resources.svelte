@@ -5,8 +5,8 @@
   export async function preload() {
     return {
       cache: await client.query({
-        query: RESOURCES
-      })
+        query: RESOURCES,
+      }),
     };
   }
 </script>
@@ -20,7 +20,7 @@
   restore(client, RESOURCES, cache.data);
 
   const resources = query(client, {
-    query: RESOURCES
+    query: RESOURCES,
   });
 </script>
 
@@ -58,9 +58,9 @@
 <svelte:head>
   <title>Resources</title>
   <script>
-    (function(w, d, t, s, n) {
+    (function (w, d, t, s, n) {
       w.FlodeskObject = n;
-      var fn = function() {
+      var fn = function () {
         (w[n].q = w[n].q || []).push(arguments);
       };
       w[n] = w[n] || fn;
@@ -83,14 +83,14 @@
 <TransitionWrapper>
   <div
     class="app-division-wrapper default-section-header font-white
-    resources-main-bg">
+      resources-main-bg">
     <div class="section-wrapper">
       <div class="center-section-wrapper">
         <h1 class="app-decor">Resources</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
-          nostrum! Blanditiis eligendi tenetur, ipsum cum amet natus ab laborum
-          odit excepturi voluptas ad!
+          We’re sharing free stuff! Printables, guides, templates, and many
+          more. Watch this space and be on your road to being the boss of your
+          own life.
         </p>
       </div>
     </div>
@@ -143,12 +143,11 @@
           <script>
             window.fd("form", {
               formId: "5f3459b06267530026690ee8",
-              containerEl: "#fd-form-5f3459b06267530026690ee8"
+              containerEl: "#fd-form-5f3459b06267530026690ee8",
             });
           </script>
         </div>
       </div>
     </div>
   </div>
-
 </TransitionWrapper>

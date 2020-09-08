@@ -16,10 +16,10 @@
         "http://pinaygirlboss.com/wp-api/wp-json/contact-form-7/v1/contact-forms/76/feedback",
         {
           method: "POST",
-          body: formData
+          body: formData,
         }
       )
-        .then(e => {
+        .then((e) => {
           if (e.statusText === "OK") {
             sent = true;
             $contact.subject = "";
@@ -29,7 +29,7 @@
           console.log({ e });
           loading = false;
         })
-        .catch(err => {
+        .catch((err) => {
           loading = false;
           console.log({ err });
         });
@@ -71,13 +71,16 @@
 <TransitionWrapper>
   <div
     class="app-division-wrapper default-section-header font-white
-    contact-main-bg">
+      contact-main-bg">
     <div class="section-wrapper">
       <div class="center-section-wrapper">
         <h1 class="app-decor">Get Exclusives</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
-          nostrum! Blanditiis eligendi tenetur.
+          Join in on the conversation! This online kwentuhan is abous us and
+          YOU! Tell us what you think, did our guests inspire you to start an
+          online business, or maybe pursue learning a new skill? Do you have a
+          great idea about who we should invite to be the next guest? Or just
+          say hi, we would love to hear from you!
         </p>
       </div>
     </div>
@@ -102,11 +105,7 @@
           required />
         <div class="app-btn">
           <button>
-            {#if !loading}
-              <span>Submit</span>
-            {:else}
-              <span>Loading...</span>
-            {/if}
+            {#if !loading}<span>Submit</span>{:else}<span>Loading...</span>{/if}
           </button>
         </div>
       </form>
