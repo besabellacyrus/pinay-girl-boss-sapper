@@ -19,6 +19,23 @@
   <div class="footer-wrapper-main">
     <div class="left-footer">
       <div class="left-footer-content">
+        <div class="logo">
+          <img src="/img/girl-boss-logo.svg" alt="Pinay Girl Boss Logo" />
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <span>
+            <a href="mailto:pinaygirlboss@gmail.com">pinaygirlboss@gmail.com</a>
+          </span>
+          <br />
+          <br />
+          <a href="/page/privacy-policy">
+            <h3>Privacy Policy</h3>
+          </a>
+        </div>
+        <span>&copy; 2020 The Pinay Girl Boss. All rights reserved.</span>
+      </div>
+      <!-- <div class="left-footer-content">
         <div><img src="/img/girl-boss-logo.svg" alt="" /></div>
         <div>
           <h3>Contact Us</h3>
@@ -32,9 +49,9 @@
           </a>
         </div>
       </div>
-      <div class="footer-copy-rights">
-        &copy; 2020 The Pinay Girl Boss. All rights reserved.
-      </div>
+      <div>
+        <span>&copy; 2020 The Pinay Girl Boss. All rights reserved.</span>
+      </div> -->
     </div>
     <div class="right-footer">
       <div>

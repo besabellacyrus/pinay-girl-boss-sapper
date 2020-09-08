@@ -564,18 +564,30 @@ footer {
     background-color: #e2e2e2;
     width: 100%;
     .left-footer-content {
-      display: flex;
-      margin: 0 auto;
       justify-content: center;
       align-items: center;
-      & div {
-        margin: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 3rem;
+      grid-template-rows: 1fr 1fr;
+      margin: 0 auto;
+      padding-left: 10rem;
+      span {
+        font-size: 1.2rem;
+      }
+      .logo {
+        margin-right: 2rem;
       }
       @media screen and (max-width: 768px) {
+        text-align: center;
         flex-direction: column;
+        grid-template-columns: initial;
+        padding-left: 0;
       }
       @media screen and (max-width: 425px) {
         text-align: center;
+        grid-template-columns: initial;
+        padding-left: 0;
       }
     }
   }
@@ -608,6 +620,7 @@ footer {
     }
   }
 }
+
 section {
   display: flex;
   justify-content: space-evenly;
