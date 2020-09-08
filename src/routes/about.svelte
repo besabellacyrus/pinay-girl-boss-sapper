@@ -70,7 +70,7 @@
       text-align: left;
     }
     button {
-      margin-top: 1rem;
+      margin-top: 2rem;
       border-radius: 25px;
       background: #f9db7d;
       padding: 1rem 2rem;
