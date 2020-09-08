@@ -142,18 +142,15 @@
       <div class="founder-photo"><img src="/img/Founder1.png" alt="" /></div>
       <div class="max-content">
         <h1>Meet Max</h1>
-        <ol>
-          <li>30 years-old</li>
-          <li>Co-Founder of Pinay Girl Boss</li>
-          <li>Founder of Certified Oilers</li>
-          <li>
-            Currently working for an international Airline (celebrated my 10th
-            5. year this year!)
-          </li>
-          <li>Mom to Lucas</li>
-          <li>Wife of Arvin</li>
-          <li>Queen of our house</li>
-        </ol>
+        <p>
+          After graduating from the University of the Philippines Diliman, I
+          moved back to Saudi Arabia where I started my career in the aviation
+          industry in 2010. I am a dreamer, I am an unconventional mom, I enjoy
+          getting lost in books, I believe that meals are not complete without
+          dessert and I love traveling the world with my family. I am the other
+          half of Pinay Girl Boss and proud boss mama of the Certified Oilers
+          community.
+        </p>
         <a
           href="https://www.youngliving.com/vo/#/signup/new-start?sponsorid=11107278&enrollerid=11107278&isocountrycode=SA&culture=en-US&type=member"
           target="_blank">
