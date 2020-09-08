@@ -23,7 +23,7 @@
         <div>
           <h3>Contact Us</h3>
           <span>
-            <a href="mailto:someone@yoursite.com">pinaygirlboss@gmail.com</a>
+            <a href="mailto:pinaygirlboss@gmail.com">pinaygirlboss@gmail.com</a>
           </span>
           <br />
           <br />
