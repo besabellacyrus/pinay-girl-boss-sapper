@@ -74,7 +74,7 @@
       contact-main-bg">
     <div class="section-wrapper">
       <div class="center-section-wrapper">
-        <h1 class="app-decor">Get Exclusives</h1>
+        <h1 class="app-decor">Get In Touch</h1>
         <p>
           Join in on the conversation! This online kwentuhan is abous us and
           YOU! Tell us what you think, did our guests inspire you to start an

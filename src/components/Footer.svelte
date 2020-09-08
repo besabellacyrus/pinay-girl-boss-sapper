@@ -22,7 +22,9 @@
         <div><img src="/img/girl-boss-logo.svg" alt="" /></div>
         <div>
           <h3>Contact Us</h3>
-          <span>pinaygirlboss@gmail.com</span>
+          <span>
+            <a href="mailto:someone@yoursite.com">pinaygirlboss@gmail.com</a>
+          </span>
           <br />
           <br />
           <a href="/page/privacy-policy">
