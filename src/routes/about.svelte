@@ -130,7 +130,7 @@
           Project Ph and Pinay Girl Boss.
         </p>
         <a href="https://tinyurl.com/oilnatural" target="_blank">
-          <button>Join's Tina Essential Oil Tribe</button>
+          <button>Join Tina's Essential Oil Tribe</button>
         </a>
       </div>
       <div><img src="/img/Founder2.png" alt="" /></div>
@@ -154,7 +154,7 @@
         <a
           href="https://www.youngliving.com/vo/#/signup/new-start?sponsorid=11107278&enrollerid=11107278&isocountrycode=SA&culture=en-US&type=member"
           target="_blank">
-          <button>Join's Max Essential Oil Tribe</button>
+          <button>Join Max's Essential Oil Tribe</button>
         </a>
       </div>
     </div>
