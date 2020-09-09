@@ -1,43 +1,65 @@
 <script context="module">
   import client from "../../lib/apollo";
   import { EPISODES } from "../../queries/episodes";
-  import { PAGINATED_EPISODES } from "../../queries/paginatedEpisodes";
-  const initial = {
-    after: null,
-    first: 3,
-    before: null,
-    last: null,
-  };
+  // import { PAGINATED_EPISODES } from "../../queries/paginatedEpisodes";
+  // const initial = {
+  //   after: null,
+  //   first: 3,
+  //   before: null,
+  //   last: null,
+  // };
   export async function preload() {
     return {
       cache: await client.query({
         query: EPISODES,
       }),
-      paginated: await client.query({
-        query: PAGINATED_EPISODES,
-        variables: initial,
-      }),
+      // paginated: await client.query({
+      //   query: PAGINATED_EPISODES,
+      //   variables: initial,
+      // }),
     };
   }
 </script>
 
 <script>
   import TransitionWrapper from "../../components/TransitionWrapper.svelte";
+  import { OLD_EPISODES } from "../../queries/oldEpisodes";
+
   import { restore, query } from "svelte-apollo";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
   import moment from "moment";
+  import { prevent_default } from "svelte/internal";
 
   export let cache;
-  export let paginated;
+  // export let paginated;
   restore(client, EPISODES, cache.data);
 
-  const episodes = query(client, {
-    query: EPISODES,
+  let episodes = query(client, {
+    query: OLD_EPISODES,
+    variables: { first: 5, before: null, after: null },
   });
-  const cc = paginated.data.episodes.edges[0];
 
-  console.log({ paginated: paginated.data.episodes.edges.indexOf(cc) });
+  async function getPrev({ last, before, after, first }) {
+    episodes.fetchMore({
+      variables: { last, before, after, first },
+      updateQuery: (prev, { fetchMoreResult }) => {
+        if (!fetchMoreResult) return prev;
+        const newNodes = fetchMoreResult.episodes.nodes;
+        const pageInfo = fetchMoreResult.episodes.pageInfo;
+
+        return newNodes.length
+          ? {
+              episodes: {
+                __typename: prev.episodes.__typename,
+                nodes: [...prev.episodes.nodes, ...newNodes],
+                pageInfo,
+              },
+            }
+          : prev;
+      },
+    });
+  }
 </script>
 
 <style lang="scss">
@@ -134,6 +156,18 @@
         {:else}
           <p>ERROR!!</p>
         {/if}
+        <div class="load-more-wrapper">
+          {#if data.data.episodes.pageInfo.hasNextPage}
+            <button
+              on:click={() => getPrev({
+                  first: 5,
+                  after: null,
+                  before: data.data.episodes.pageInfo.endCursor,
+                })}>
+              Load More
+            </button>
+          {/if}
+        </div>
       {/await}
     </div>
   </section>

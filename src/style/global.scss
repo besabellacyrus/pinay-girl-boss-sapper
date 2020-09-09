@@ -268,6 +268,16 @@ h4 {
     height: 100vh;
   }
 }
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  button {
+    background-color: $yellow;
+    border-radius: 25px;
+    color: #fff;
+    padding: 1rem 3rem;
+  }
+}
 .podcast-player-wrapper {
   height: 13rem;
   background-color: #e3e3e3;

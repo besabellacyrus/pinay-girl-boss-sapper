@@ -1,6 +1,12 @@
-import{s as e,a as t,b as n,d as s}from"./svelte-apollo.es.90933ee1.js";const i=e`
+import{s as e,a as t,b as n,d as s}from"./svelte-apollo.es.4e996766.js";const i=e`
   query MyQuery {
-    episodes {
+    episodes (first: 10) {
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
       nodes {
         title
         slug
