@@ -90,16 +90,19 @@
   }
 
   .podcast-player {
-    background: #e3e3e3;
+    // background: #e3e3e3;
     border-radius: 10px;
-    width: 100%;
     margin: 0 auto;
     margin-bottom: 5rem;
-    height: 15rem;
+    // height: 15rem;
     overflow: hidden;
     max-width: 90rem;
     iframe {
       width: 100%;
+      height: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      max-height: 10rem;
     }
   }
   .podcast-info {
