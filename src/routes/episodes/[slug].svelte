@@ -308,6 +308,53 @@
           {/if}
         </div>
       {/if}
+
+      <div class="common-wrapper social-media">
+        {#if data.data.episode.episodes_gql.facebook}
+          <div>
+            <img src="img/facebook.svg" alt="Facebook" />
+            <span>
+              <a href={data.data.episode.episodes_gql.facebook} target="_blank">
+                {data.data.episode.episodes_gql.facebook}
+              </a>
+            </span>
+          </div>
+        {/if}
+        {#if data.data.episode.episodes_gql.facebookGroup}
+          <div>
+            <img src="img/facebook.svg" alt="Facebook Group" />
+            <span>
+              <a
+                href={data.data.episode.episodes_gql.facebookGroup}
+                target="_blank">
+                {data.data.episode.episodes_gql.facebookGroup}
+              </a>
+            </span>
+          </div>
+        {/if}
+        {#if data.data.episode.episodes_gql.twitter}
+          <div>
+            <img src="img/twitter.svg" alt="Twitter" />
+            <span>
+              <a href={data.data.episode.episodes_gql.twitter} target="_blank">
+                {data.data.episode.episodes_gql.twitter}
+              </a>
+            </span>
+          </div>
+        {/if}
+        {#if data.data.episode.episodes_gql.instagram}
+          <div>
+            <img src="img/instagram.svg" alt="Instagram" />
+            <span>
+              <a
+                href={data.data.episode.episodes_gql.instagram}
+                target="_blank">
+                {data.data.episode.episodes_gql.instagram}
+              </a></span>
+          </div>
+        {/if}
+      </div>
+
       {#if data.data.episode.episodes_gql.sponsors}
         <div class="common-wrapper about-resources">
           <h3>This episode is brought to you by:</h3>

@@ -11,6 +11,10 @@ export const EPISODE = gql`
         embed
         resources
         sponsors
+        facebook
+        facebookGroup
+        instagram
+        twitter
         episodeThumbnail {
           sourceUrl
         }
