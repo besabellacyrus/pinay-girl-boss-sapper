@@ -310,14 +310,18 @@
       {/if}
 
       <div class="common-wrapper social-media">
-        {#if data.data.episode.episodes_gql.facebook}
+        {#if data.data.episode.episodes_gql.facebook && data.data.episode.episodes_gql.facebook.length > 0}
           <div>
             <img src="img/facebook.svg" alt="Facebook" />
-            <span>
-              <a href={data.data.episode.episodes_gql.facebook} target="_blank">
-                {data.data.episode.episodes_gql.facebook}
-              </a>
-            </span>
+            {#each data.data.episode.episodes_gql.facebook.split(',') as facebook, i}
+              <span>
+                <a
+                  href={'https://facebook.com/' + facebook.trim()}
+                  target="_blank">
+                  {facebook.trim()}
+                </a>
+              </span>
+            {/each}
           </div>
         {/if}
         {#if data.data.episode.episodes_gql.facebookGroup}
@@ -332,25 +336,32 @@
             </span>
           </div>
         {/if}
-        {#if data.data.episode.episodes_gql.twitter}
+        {#if data.data.episode.episodes_gql.twitter && data.data.episode.episodes_gql.twitter.length > 0}
           <div>
             <img src="img/twitter.svg" alt="Twitter" />
-            <span>
-              <a href={data.data.episode.episodes_gql.twitter} target="_blank">
-                {data.data.episode.episodes_gql.twitter}
-              </a>
-            </span>
+            {#each data.data.episode.episodes_gql.twitter.split(',') as twitter, i}
+              <span>
+                <a
+                  href={'https://twitter.com/' + twitter.trim()}
+                  target="_blank">
+                  @{twitter.trim()}
+                </a>
+              </span>
+            {/each}
           </div>
         {/if}
-        {#if data.data.episode.episodes_gql.instagram}
+        {#if data.data.episode.episodes_gql.instagram && data.data.episode.episodes_gql.instagram.length > 0}
           <div>
             <img src="img/instagram.svg" alt="Instagram" />
-            <span>
-              <a
-                href={data.data.episode.episodes_gql.instagram}
-                target="_blank">
-                {data.data.episode.episodes_gql.instagram}
-              </a></span>
+            {#each data.data.episode.episodes_gql.instagram.split(',') as instagram, i}
+              <span>
+                <a
+                  href={'https://instagram.com/' + instagram.trim()}
+                  target="_blank">
+                  @{instagram.trim()}
+                </a>
+              </span> &nbsp;
+            {/each}
           </div>
         {/if}
       </div>
